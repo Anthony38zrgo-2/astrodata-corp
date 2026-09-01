@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 600" width="480" height="600">
+  <defs>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e6c96b"/>
+      <stop offset="0.5" stop-color="#d4af37"/>
+      <stop offset="1" stop-color="#9a7b1f"/>
+    </linearGradient>
+  </defs>
+  <rect width="480" height="600" fill="#0a0a0d"/>
+
+  <circle cx="240" cy="210" r="120" fill="none" stroke="url(#gold)" stroke-opacity="0.35" stroke-width="2" stroke-dasharray="4 8"/>
+
+  <circle cx="240" cy="210" r="70" fill="#16171c" stroke="url(#gold)" stroke-width="2.5"/>
+  <circle cx="206" cy="188" r="4" fill="#f3eede"/>
+  <circle cx="274" cy="188" r="4" fill="#f3eede"/>
+  <path d="M212 240 q28 22 56 0" fill="none" stroke="#f3eede" stroke-width="3" stroke-linecap="round"/>
+  <text x="240" y="352" text-anchor="middle" font-family="Arial" font-size="18" fill="#b3a78c" letter-spacing="3">FUNDADOR</text>
+  <text x="240" y="382" text-anchor="middle" font-family="Georgia, serif" font-size="24" fill="url(#gold)">VIP_CLUB</text>
+
+  <g fill="#d4af37">
+    <circle cx="240" cy="430" r="2.5"/>
+    <circle cx="150" cy="470" r="2"/>
+    <circle cx="330" cy="470" r="2"/>
+  </g>
+</svg>

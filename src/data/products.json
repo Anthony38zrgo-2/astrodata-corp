@@ -1,0 +1,24 @@
+{
+  "header": {
+    "title": "¿Qué te ofrecemos?",
+    "subtitle": "Experiencias VIP_CLUB"
+  },
+  "items": [
+    {
+      "id": "acceso-vip",
+      "title": "Acceso VIP",
+      "description": "Acceso anticipado a lanzamientos, eventos y espacios reservados, con un tratamiento preferente para cada miembro.",
+      "image": "service-1.svg",
+      "imageAlt": "Acceso anticipado VIP con trato preferente",
+      "visualVariant": "rectangular"
+    },
+    {
+      "id": "concierge",
+      "title": "Concierge Personal",
+      "description": "Un equipo dedicado disponible las 24 horas para resolver, gestionar y coordinar cada detalle de tu experiencia.",
+      "image": "service-2.svg",
+      "imageAlt": "Concierge personal disponible 24/7",
+      "visualVariant": "capsule"
+    }
+  ]
+}

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Club VIP - Acceso Exclusivo</title>
+    <style>
+        :root {
+            --gold: #d4af37;
+            --gold-hover: #f3e5ab;
+            --dark-bg: #0a0a0a;
+            --card-bg: #161616;
+            --text-light: #ffffff;
+            --text-muted: #a0a0a0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: var(--text-light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Navegación */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem 5%;
+            border-bottom: 1px solid #222;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            color: var(--gold);
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        /* Héroe / Introducción */
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 5rem 1rem;
+            min-height: 70vh;
+        }
+
+        .badge {
+            background: rgba(212, 175, 55, 0.1);
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 300;
+            margin-bottom: 1rem;
+            letter-spacing: -1px;
+        }
+
+        .hero h1 span {
+            font-weight: 800;
+            color: var(--gold);
+        }
+
+        .hero p {
+            color: var(--text-muted);
+            max-width: 600px;
+            font-size: 1.1rem;
+            margin-bottom: 2.5rem;
+        }
+
+        /* Tarjeta VIP Visual */
+        .vip-card-container {
+            perspective: 1000px;
+            margin-bottom: 3rem;
+        }
+
+        .vip-card {
+            width: 350px;
+            height: 200px;
+            background: linear-gradient(135deg, #1f1f1f 0%, #000000 100%);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 15px;
+            padding: 2rem;
+            position: relative;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.5), inset 0 0 15px rgba(212, 175, 55, 0.1);
+            transition: transform 0.5s;
+        }
+
+        .vip-card:hover {
+            transform: rotateY(10deg) rotateX(10deg);
+        }
+
+        .vip-card .chip {
+            width: 40px;
+            height: 30px;
+            background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
+            border-radius: 4px;
+            margin-bottom: 2rem;
+            opacity: 0.7;
+        }
+
+        .vip-card .card-number {
+            font-size: 1.2rem;
+            letter-spacing: 4px;
+            color: var(--gold);
+            margin-bottom: 1.5rem;
+        }
+
+        .vip-card .card-footer {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        /* Sección de Beneficios */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            padding: 5rem 5%;
+            background-color: var(--card-bg);
+        }
+
+        .feature-card {
+            padding: 2.5rem;
+            border: 1px solid #222;
+            border-radius: 8px;
+            transition: border-color 0.3s;
+        }
+
+        .feature-card:hover {
+            border-color: var(--gold);
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            color: var(--gold);
+            margin-bottom: 1rem;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .feature-card p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* Formulario de Registro / Acceso */
+        .access-section {
+            padding: 5rem 5%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .access-form {
+            background-color: var(--card-bg);
+            padding: 3rem;
+            border-radius: 12px;
+            width: 100%;
+            max-width: 450px;
+            border: 1px solid #222;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 1rem;
+            background-color: var(--dark-bg);
+            border: 1px solid #333;
+            color: var(--text-light);
+            border-radius: 6px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus {
+            border-color: var(--gold);
+        }
+
+        .btn-vip {
+            width: 100%;
+            padding: 1rem;
+            background: linear-gradient(135deg, var(--gold) 0%, #b8860b 100%);
+            border: none;
+            color: #000;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: transform 0.2s, opacity 0.3s;
+        }
+
+        .btn-vip:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem;
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            border-top: 1px solid #222;
+        }
+
+        /* Responsivo */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .nav-links { display: none; }
+            .vip-card { width: 300px; height: 180px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navegación -->
+    <nav>
+        <div class="logo">VIP_CLUB</div>
+        <ul class="nav-links">
+            <li><a href="#beneficios">Beneficios</a></li>
+            <li><a href="#acceso">Acceso</a></li>
+            <li><a href="#soporte">Soporte Concierge</a></li>
+        </ul>
+    </nav>
+
+    <!-- Héroe -->
+    <section class="hero">
+        <div class="badge">Invitación Exclusiva</div>
+        <h1>El siguiente nivel de <span>Privilegios</span></h1>
+        <p>Acceda a un ecosistema diseñado únicamente para los miembros más exigentes. Experiencias personalizadas, soporte 24/7 y beneficios sin límites.</p>
+        
+        <!-- Tarjeta VIP Interactiva -->
+        <div class="vip-card-container">
+            <div class="vip-card">
+                <div class="chip"></div>
+                <div class="card-number">•••• •••• •••• 8888</div>
+                <div class="card-footer">
+                    <div>Miembro VIP</div>
+                    <div>EXP: ∞</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Beneficios -->
+    <section class="features" id="beneficios">
+        <div class="feature-card">
+            <div class="feature-icon">✦</div>
+            <h3>Acceso Prioritario</h3>
+            <p>Sáltese las filas de espera. Usted es siempre nuestra máxima prioridad operativa.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">♛</div>
+            <h3>Eventos Privados</h3>
+            <p>Invitaciones exclusivas a lanzamientos globales, galas y reuniones de networking de alto nivel.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🎧</div>
+            <h3>Concierge 24/7</h3>
+            <p>Un asistente personal disponible en cualquier momento para resolver sus requerimientos particulares.</p>
+        </div>
+    </section>
+
+    <!-- Formulario de Acceso -->
+    <section class="access-section" id="acceso">
+        <div class="access-form">
+            <h2 style="margin-bottom: 2rem; text-align: center; font-weight: 400;">Iniciar Sesión VIP</h2>
+            <form onsubmit="validarAcceso(event)">
+                <div class="form-group">
+                    <label for="codigo">Código de Invitación</label>
+                    <input type="text" id="codigo" placeholder="VIP-XXXX-XXXX" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Contraseña Cifrada</label>
+                    <input type="password" id="password" placeholder="••••••••" required>
+                </div>
+                <button type="submit" class="btn-vip">Solicitar Ingreso</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 VIP_CLUB. Todos los derechos reservados. Estrictamente confidencial.</p>
+    </footer>
+
+    <!-- Lógica básica del Prototipo -->
+    <script>
+        function validarAcceso(event) {
+            event.preventDefault();
+            const codigo = document.getElementById('codigo').value;
+            alert(`Verificando credenciales para el código: ${codigo}\n\nAcceso concedido en modo de prueba.`);
+        }
+    </script>
+</body>
+</html>

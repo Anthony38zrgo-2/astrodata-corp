@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 360" width="520" height="360">
+  <defs>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e6c96b"/>
+      <stop offset="0.5" stop-color="#d4af37"/>
+      <stop offset="1" stop-color="#9a7b1f"/>
+    </linearGradient>
+  </defs>
+  <rect width="520" height="360" fill="#16171c"/>
+
+  <rect x="60" y="70" width="400" height="220" rx="24" fill="#1c1d22" stroke="url(#gold)" stroke-width="2"/>
+  <rect x="84" y="94" width="352" height="3" fill="url(#gold)" opacity="0.9"/>
+  <text x="260" y="170" text-anchor="middle" font-family="Georgia, serif" font-size="44" font-weight="700" fill="url(#gold)" letter-spacing="8">VIP</text>
+  <text x="260" y="214" text-anchor="middle" font-family="Arial" font-size="13" fill="#b3a78c" letter-spacing="4">ACCESO ANTICIPADO</text>
+
+  <rect x="110" y="246" width="120" height="34" rx="8" fill="url(#gold)" opacity="0.22"/>
+  <path d="M300 262 l14 0 m0 0 l-5 -5 m5 5 l-5 5" stroke="url(#gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <text x="340" y="267" font-family="Arial" font-size="14" fill="#f3eede">Prioridad</text>
+</svg>

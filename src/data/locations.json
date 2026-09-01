@@ -1,0 +1,159 @@
+{
+  "brand": {
+    "name": "VIP_CLUB",
+    "tagline": "Experiencias Exclusivas",
+    "logo": "logo-vip.webp",
+    "headerLogo": "logo-header-inverted.webp",
+    "logoAlt": "VIP_CLUB, Experiencias Exclusivas"
+  },
+  "navigation": [
+    { "label": "Inicio", "href": "#inicio" },
+    { "label": "Nosotros", "href": "#nosotros" },
+    { "label": "Servicios", "href": "#servicios" },
+    { "label": "Recursos", "href": "#recursos" },
+    { "label": "Contacto", "href": "#contacto" }
+  ],
+  "home": {
+    "hero": {
+      "title": "Bienvenidos",
+      "headline": "Acceso a experiencias que solo unos pocos conocen",
+      "description": "Un club privado diseñado para quienes buscan privilegios, acceso anticipado y un trato de élite, acompañados de un concierge dedicado.",
+      "primaryCta": "Solicitar acceso",
+      "secondaryCta": "Conocer VIP_CLUB",
+      "highlights": [
+        "Acceso prioritario",
+        "Eventos privados",
+        "Concierge 24/7"
+      ],
+      "image": "hero-vip.svg",
+      "imageAlt": "Tarjeta VIP dorada con membrete de VIP_CLUB"
+    }
+  },
+  "about": {
+    "philosophy": {
+      "title": "¿Qué es VIP_CLUB?",
+      "subtitle": "Nuestra filosofía",
+      "paragraphs": [
+        "VIP_CLUB nace de la idea de que el verdadero lujo no está en lo que se compra, sino en lo que se accede. Reunimos a una comunidad selecta en torno a experiencias, beneficios y un servicio pensado para cada miembro.",
+        "Creemos que cada detalle cuenta. Por eso cultivamos una experiencia discreta, personalizada y orientada a quienes valoran su tiempo, su privacidad y las oportunidades que no están al alcance de todos."
+      ],
+      "image": "philosophy.svg",
+      "imageAlt": "Emblema de la filosofía de VIP_CLUB"
+    },
+    "founder": {
+      "title": "¿Quién está detrás de VIP_CLUB?",
+      "subtitle": "Fundador de VIP_CLUB",
+      "name": "Nombre del Fundador",
+      "paragraphs": [
+        "Hola, soy el fundador de VIP_CLUB.",
+        "Construí este proyecto con la convicción de que el acceso selecto debe vivirse con elegancia y total acompañamiento.",
+        "Nos encargamos personalmente de que cada miembro reciba una atención impecable, de principio a fin.",
+        "Es un gusto poder acompañarte en la experiencia."
+      ],
+      "image": "founder.svg",
+      "imageAlt": "Retrato del fundador de VIP_CLUB"
+    },
+    "virtualCare": {
+      "title": "¿Por qué VIP_CLUB?",
+      "description": "En VIP_CLUB creemos que la exclusividad debe adaptarse a tu estilo de vida. Por eso ofrecemos una experiencia donde el acceso, los beneficios y el acompañamiento se ajustan a ti, sin importar dónde te encuentres.",
+      "image": "hero-vip.svg",
+      "imageAlt": "Experiencia VIP_CLUB desde donde estés"
+    }
+  },
+  "resources": {
+    "title": "Recursos para vivir VIP_CLUB",
+    "items": [
+      {
+        "id": "acciones-exclusivas",
+        "title": "Acciones exclusivas para socios",
+        "buttonLabel": "Más aquí",
+        "image": "resource-1.svg",
+        "imageAlt": "Beneficios exclusivos para socios",
+        "visualSize": "large"
+      },
+      {
+        "id": "experiencias",
+        "title": "Experiencias privadas",
+        "buttonLabel": "Más aquí",
+        "image": "resource-2.svg",
+        "imageAlt": "Experiencias privadas VIP_CLUB",
+        "visualSize": "small"
+      },
+      {
+        "id": "concierge",
+        "title": "Concierge a tu disposición",
+        "buttonLabel": "Más aquí",
+        "image": "resource-3.svg",
+        "imageAlt": "Concierge disponible 24/7",
+        "visualSize": "small"
+      },
+      {
+        "id": "beneficios",
+        "title": "Beneficios para cada miembro",
+        "buttonLabel": "Más aquí",
+        "image": "resource-4.svg",
+        "imageAlt": "Beneficios reservados para miembros",
+        "visualSize": "large"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contáctanos",
+    "description": "Estamos aquí para acompañarte en tu experiencia. Descubre lo que VIP_CLUB puede ofrecerte.",
+    "fields": [
+      { "name": "firstName", "label": "Primer nombre", "type": "text", "required": true },
+      { "name": "lastName", "label": "Apellido", "type": "text", "required": true },
+      { "name": "email", "label": "Email", "type": "email", "required": true }
+    ],
+    "captchaLabel": "Soy humano",
+    "submitLabel": "Enviar"
+  },
+  "whatsapp": {
+    "countryCode": "51",
+    "panelTitle": "¿Cómo podemos ayudarte?",
+    "panelDescription": "Elige una consulta frecuente y conversemos por WhatsApp.",
+    "defaultMessage": "Hola, quisiera recibir información sobre las experiencias VIP_CLUB.",
+    "serviceButtonLabel": "Solicitar información",
+    "questions": [
+      {
+        "label": "¿Cómo accedo a VIP_CLUB?",
+        "message": "Hola, quisiera saber cómo convertirme en miembro de VIP_CLUB."
+      },
+      {
+        "label": "¿Qué beneficios incluye la membresía?",
+        "message": "Hola, quisiera conocer los beneficios incluidos en la membresía VIP_CLUB."
+      },
+      {
+        "label": "¿Cuál es el costo de la membresía?",
+        "message": "Hola, quisiera consultar el costo de la membresía y los medios de pago."
+      },
+      {
+        "label": "¿Con qué frecuencia hay nuevos accesos?",
+        "message": "Hola, quisiera saber la frecuencia con la que se liberan nuevos accesos y experiencias."
+      },
+      {
+        "label": "¿Puedo cancelar mi membresía?",
+        "message": "Hola, quisiera conocer las condiciones para cancelar la membresía VIP_CLUB."
+      }
+    ]
+  },
+  "footer": {
+    "phone": "900000000",
+    "email": "contacto@vipclub.example",
+    "copyright": "©2026 - VIP_CLUB",
+    "socialNetworks": [
+      {
+        "platform": "Facebook",
+        "url": "https://www.facebook.com"
+      },
+      {
+        "platform": "Instagram",
+        "url": "https://www.instagram.com"
+      },
+      {
+        "platform": "TikTok",
+        "url": "https://www.tiktok.com"
+      }
+    ]
+  }
+}

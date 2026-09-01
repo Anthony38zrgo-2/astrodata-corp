@@ -1,0 +1,63 @@
+@theme {
+  --font-sans: "DM Sans", "Segoe UI", sans-serif;
+  --font-display: "DM Serif Display", Georgia, serif;
+
+  --color-white: #f3eede;
+  --color-coexistir-900: #d4af37;
+  --color-coexistir-700: #c9a244;
+  --color-coexistir-500: #b3902f;
+  --color-coexistir-active: #e6c96b;
+  --color-sage-400: #4a3c1c;
+  --color-sage-100: #1c1d22;
+  --color-icon-muted: #8a7a4a;
+  --color-soft-white: #0a0a0d;
+  --color-ink: #f3eede;
+  --color-muted: #b3a78c;
+  --color-line: #2a2a32;
+
+  --shadow-soft: 0 24px 70px -30px rgb(0 0 0 / 0.75);
+  --shadow-card: 0 18px 45px -26px rgb(0 0 0 / 0.55);
+}
+
+:root {
+  --palette-sage: #d4af37;
+  --palette-mist: #6b5518;
+  --palette-warm-white: #0a0a0d;
+  --palette-light-gray: #1c1d22;
+  --palette-dark-olive: #d4af37;
+
+  --color-background: var(--palette-warm-white);
+  --color-surface: var(--palette-light-gray);
+  --color-primary: var(--palette-dark-olive);
+  --color-secondary: var(--palette-sage);
+  --color-accent: var(--palette-mist);
+
+  --color-text: #f3eede;
+  --color-text-secondary: #b3a78c;
+  --color-text-inverse: #0a0a0d;
+  --color-text-accent: #d4af37;
+
+  --color-border: rgb(212 175 55 / 0.22);
+  --color-highlight: rgb(243 238 222 / 0.08);
+  --color-shadow: rgb(0 0 0 / 0.6);
+
+  --aero-glass-sage: rgb(212 175 55 / 0.28);
+  --aero-glass-mist: rgb(107 85 24 / 0.4);
+  --aero-glass-light: rgb(243 238 222 / 0.08);
+  --aero-border-light: rgb(243 238 222 / 0.14);
+  --aero-border-dark: rgb(212 175 55 / 0.26);
+  --aero-shadow: rgb(0 0 0 / 0.65);
+
+  --coexistir-green-900: #d4af37;
+  --coexistir-green-700: #c9a244;
+  --coexistir-green-500: #b3902f;
+  --coexistir-green-active: #e6c96b;
+  --coexistir-sage-400: #4a3c1c;
+  --coexistir-sage-100: #1c1d22;
+  --coexistir-icon-muted: #8a7a4a;
+  --coexistir-white: #f3eede;
+  --coexistir-off-white: #0a0a0d;
+  --coexistir-text: #f3eede;
+  --coexistir-text-muted: #b3a78c;
+  --coexistir-border: #2a2a32;
+}
