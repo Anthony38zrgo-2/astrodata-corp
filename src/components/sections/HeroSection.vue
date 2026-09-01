@@ -49,9 +49,15 @@ const { whatsappUrl } = useWhatsApp();
         />
         <figcaption>
           <span class="status-dot" aria-hidden="true"></span>
-          Atención exclusiva garantizada
+          Lectura clara y personalizada
         </figcaption>
       </figure>
+    </div>
+    <div class="hero-stats" aria-label="Astrodata en cifras">
+      <div v-for="stat in siteData.home.stats" :key="stat.label" class="hero-stat">
+        <strong>{{ stat.value }}</strong>
+        <span>{{ stat.label }}</span>
+      </div>
     </div>
   </section>
 </template>

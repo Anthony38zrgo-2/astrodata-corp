@@ -1,105 +1,140 @@
 {
   "brand": {
-    "name": "VIP_CLUB",
-    "tagline": "Experiencias Exclusivas",
-    "logo": "logo-vip.webp",
-    "headerLogo": "logo-header-inverted.webp",
-    "logoAlt": "VIP_CLUB, Experiencias Exclusivas"
+    "name": "Astrodata",
+    "tagline": "Numerología y tu fecha de nacimiento",
+    "logo": "logo-header.svg",
+    "headerLogo": "logo-header.svg",
+    "logoAlt": "Astrodata, numerología y tu fecha de nacimiento"
   },
   "navigation": [
     { "label": "Inicio", "href": "#inicio" },
-    { "label": "Nosotros", "href": "#nosotros" },
+    { "label": "Numerología", "href": "#numerologia" },
     { "label": "Servicios", "href": "#servicios" },
-    { "label": "Recursos", "href": "#recursos" },
+    { "label": "Calculadora", "href": "#calculadora" },
     { "label": "Contacto", "href": "#contacto" }
   ],
   "home": {
     "hero": {
       "title": "Bienvenidos",
-      "headline": "Acceso a experiencias que solo unos pocos conocen",
-      "description": "Un club privado diseñado para quienes buscan privilegios, acceso anticipado y un trato de élite, acompañados de un concierge dedicado.",
-      "primaryCta": "Solicitar acceso",
-      "secondaryCta": "Conocer VIP_CLUB",
+      "headline": "Descubre la energía que acompaña tu fecha de nacimiento",
+      "description": "La numerología pitagórica te ofrece una lectura clara y práctica de tu día de nacimiento, para comprender tu esencia, tus fortalezas y el momento que atraviesas.",
+      "primaryCta": "Calcular mi número",
+      "secondaryCta": "Ver servicios",
       "highlights": [
-        "Acceso prioritario",
-        "Eventos privados",
-        "Concierge 24/7"
+        "Método pitagórico",
+        "Asesoría personalizada",
+        "Atención por WhatsApp"
       ],
-      "image": "hero-vip.svg",
-      "imageAlt": "Tarjeta VIP dorada con membrete de VIP_CLUB"
-    }
+      "image": "hero-numerologia.svg",
+      "imageAlt": "Círculo numerológico con los números del 1 al 9"
+    },
+    "stats": [
+      { "value": "36", "label": "Países con asesorías" },
+      { "value": "7.900+", "label": "Asesorías realizadas" },
+      { "value": "2", "label": "Libros publicados" }
+    ]
   },
   "about": {
     "philosophy": {
-      "title": "¿Qué es VIP_CLUB?",
+      "title": "¿Qué es la numerología pitagórica?",
       "subtitle": "Nuestra filosofía",
       "paragraphs": [
-        "VIP_CLUB nace de la idea de que el verdadero lujo no está en lo que se compra, sino en lo que se accede. Reunimos a una comunidad selecta en torno a experiencias, beneficios y un servicio pensado para cada miembro.",
-        "Creemos que cada detalle cuenta. Por eso cultivamos una experiencia discreta, personalizada y orientada a quienes valoran su tiempo, su privacidad y las oportunidades que no están al alcance de todos."
+        "La numerología pitagórica parte de la idea de que los números encierran un significado simbólico que acompaña a cada persona. Tu fecha de nacimiento resume un mapa de energía útil para mirar tu carácter, tu propósito y el momento que vives.",
+        "No se trata de adivinar el futuro, sino de leer con orden y claridad la información que ya está en tu vida. Cada número tiene una vibración, y comprenderla te ayuda a tomar mejores decisiones y a conocerte con más profundidad."
       ],
-      "image": "philosophy.svg",
-      "imageAlt": "Emblema de la filosofía de VIP_CLUB"
+      "image": "filosofia-numerologia.svg",
+      "imageAlt": "Símbolo de la numerología pitagórica con los números del 1 al 9"
     },
     "founder": {
-      "title": "¿Quién está detrás de VIP_CLUB?",
-      "subtitle": "Fundador de VIP_CLUB",
-      "name": "Nombre del Fundador",
+      "title": "¿Quién está detrás de Astrodata?",
+      "subtitle": "Sobre tu guía",
+      "name": "Cristian Barrón",
       "paragraphs": [
-        "Hola, soy el fundador de VIP_CLUB.",
-        "Construí este proyecto con la convicción de que el acceso selecto debe vivirse con elegancia y total acompañamiento.",
-        "Nos encargamos personalmente de que cada miembro reciba una atención impecable, de principio a fin.",
-        "Es un gusto poder acompañarte en la experiencia."
+        "Soy numerólogo y me dedico desde hace años a estudiar y compartir la energía de la fecha de nacimiento.",
+        "Acompaño a personas de toda Latinoamérica a interpretar su día de nacimiento con un método claro, práctico y sin tecnicismos innecesarios.",
+        "Mi compromiso es que cada consulta te brinde una lectura honesta, ordenada y aplicable a tu día a día.",
+        "Será un gusto ayudarte a descubrir lo que tu número tiene para contarte."
       ],
-      "image": "founder.svg",
-      "imageAlt": "Retrato del fundador de VIP_CLUB"
+      "image": "fundador-numerologia.svg",
+      "imageAlt": "Retrato de Cristian Barrón, numerólogo de Astrodata"
     },
     "virtualCare": {
-      "title": "¿Por qué VIP_CLUB?",
-      "description": "En VIP_CLUB creemos que la exclusividad debe adaptarse a tu estilo de vida. Por eso ofrecemos una experiencia donde el acceso, los beneficios y el acompañamiento se ajustan a ti, sin importar dónde te encuentres.",
-      "image": "hero-vip.svg",
-      "imageAlt": "Experiencia VIP_CLUB desde donde estés"
+      "title": "¿Cómo funciona una lectura?",
+      "description": "Partimos de tu fecha de nacimiento para reducirla a tu número personal. A partir de ahí, exploramos tu energía, tus ciclos, tus fortalezas y las oportunidades que tienes delante, con un lenguaje cercano y una mirada práctica.",
+      "image": "hero-numerologia.svg",
+      "imageAlt": "Proceso de lectura numerológica desde tu fecha de nacimiento"
     }
   },
   "resources": {
-    "title": "Recursos para vivir VIP_CLUB",
+    "title": "La energía de cada número",
     "items": [
       {
-        "id": "acciones-exclusivas",
-        "title": "Acciones exclusivas para socios",
+        "id": "numeros-energia",
+        "title": "Del 1 al 9: la energía de cada número",
         "buttonLabel": "Más aquí",
-        "image": "resource-1.svg",
-        "imageAlt": "Beneficios exclusivos para socios",
+        "image": "recurso-numeros.svg",
+        "imageAlt": "Los números del 1 al 9 y su energía",
         "visualSize": "large"
       },
       {
-        "id": "experiencias",
-        "title": "Experiencias privadas",
+        "id": "fecha-nacimiento",
+        "title": "Tu día de nacimiento habla de ti",
         "buttonLabel": "Más aquí",
-        "image": "resource-2.svg",
-        "imageAlt": "Experiencias privadas VIP_CLUB",
+        "image": "recurso-fecha.svg",
+        "imageAlt": "La fecha de nacimiento como espejo de tu energía",
         "visualSize": "small"
       },
       {
-        "id": "concierge",
-        "title": "Concierge a tu disposición",
+        "id": "numeros-maestros",
+        "title": "Números maestros: 11, 22 y 33",
         "buttonLabel": "Más aquí",
-        "image": "resource-3.svg",
-        "imageAlt": "Concierge disponible 24/7",
+        "image": "recurso-maestros.svg",
+        "imageAlt": "Los números maestros 11, 22 y 33",
         "visualSize": "small"
       },
       {
-        "id": "beneficios",
-        "title": "Beneficios para cada miembro",
+        "id": "guia-practica",
+        "title": "Una guía práctica para tu número",
         "buttonLabel": "Más aquí",
-        "image": "resource-4.svg",
-        "imageAlt": "Beneficios reservados para miembros",
+        "image": "recurso-guia.svg",
+        "imageAlt": "Guía práctica de numerología aplicada a tu vida",
         "visualSize": "large"
       }
     ]
   },
+  "calculator": {
+    "title": "Calcula tu número",
+    "subtitle": "Tu fecha de nacimiento",
+    "description": "Ingresa tu fecha de nacimiento y descubre en segundos tu número personal, con un significado breve y una invitación a profundizar.",
+    "dayLabel": "Día",
+    "monthLabel": "Mes",
+    "yearLabel": "Año",
+    "example": "Ejemplo: 22 · 05 · 1989",
+    "buttonLabel": "Calcular mi número",
+    "resultTitle": "Tu número es",
+    "numericLabel": "Número personal",
+    "masterNote": "Número maestro",
+    "meaningIntro": "Este número resume tu energía de nacimiento.",
+    "recalculateLabel": "Calcular otro",
+    "defaultMeaning": "Cada número encierra una vibración distinta. Consulta un resumen de la tuya y, si quieres, profundizamos juntos."
+  },
+  "interpretations": {
+    "1": "Energía de liderazgo, iniciativa e independencia. Tiendes a abrir caminos y confiar en tu criterio.",
+    "2": "Energía de cooperación, sensibilidad y equilibrio. Sueles armonizar grupos y sentir el detalle.",
+    "3": "Energía de expresión, creatividad y comunicación. Tienes facilidad para comunicar y para inspirar.",
+    "4": "Energía de orden, constancia y trabajo bien hecho. Construyes bases sólidas y confiables.",
+    "5": "Energía de cambio, libertad y curiosidad. Te adaptas y exploras con facilidad.",
+    "6": "Energía de servicio, familia y responsabilidad. Cuidas, proteges y generas armonía.",
+    "7": "Energía de análisis, intuición y espiritualidad. Buscas comprender la esencia de las cosas.",
+    "8": "Energía de logro, gestión y abundancia. Materializas objetivos y manejas recursos con talento.",
+    "9": "Energía de cierre, compasión y sabiduría. Integras experiencias y acompañas a otros.",
+    "11": "Energía de intuición elevada e inspiración. Un número maestro con gran potencial creativo.",
+    "22": "Energía de construcción y materialización. Un número maestro capaz de convertir ideas en legados.",
+    "33": "Energía de enseñanza y servicio altruista. Un número maestro orientado a guiar y sanar."
+  },
   "contact": {
     "title": "Contáctanos",
-    "description": "Estamos aquí para acompañarte en tu experiencia. Descubre lo que VIP_CLUB puede ofrecerte.",
+    "description": "Escríbenos y conversemos sobre tu fecha de nacimiento. Estamos aquí para acompañarte en tu lectura.",
     "fields": [
       { "name": "firstName", "label": "Primer nombre", "type": "text", "required": true },
       { "name": "lastName", "label": "Apellido", "type": "text", "required": true },
@@ -112,35 +147,35 @@
     "countryCode": "51",
     "panelTitle": "¿Cómo podemos ayudarte?",
     "panelDescription": "Elige una consulta frecuente y conversemos por WhatsApp.",
-    "defaultMessage": "Hola, quisiera recibir información sobre las experiencias VIP_CLUB.",
+    "defaultMessage": "Hola, quisiera recibir información sobre la numerología de Astrodata.",
     "serviceButtonLabel": "Solicitar información",
     "questions": [
       {
-        "label": "¿Cómo accedo a VIP_CLUB?",
-        "message": "Hola, quisiera saber cómo convertirme en miembro de VIP_CLUB."
+        "label": "¿Cómo se calcula mi número?",
+        "message": "Hola, quisiera saber cómo se calcula mi número en numerología."
       },
       {
-        "label": "¿Qué beneficios incluye la membresía?",
-        "message": "Hola, quisiera conocer los beneficios incluidos en la membresía VIP_CLUB."
+        "label": "¿Qué revela mi fecha de nacimiento?",
+        "message": "Hola, quisiera conocer qué revela mi fecha de nacimiento."
       },
       {
-        "label": "¿Cuál es el costo de la membresía?",
-        "message": "Hola, quisiera consultar el costo de la membresía y los medios de pago."
+        "label": "¿Cómo agendo una asesoría?",
+        "message": "Hola, quisiera agendar una asesoría de numerología."
       },
       {
-        "label": "¿Con qué frecuencia hay nuevos accesos?",
-        "message": "Hola, quisiera saber la frecuencia con la que se liberan nuevos accesos y experiencias."
+        "label": "¿Cuánto cuesta una lectura?",
+        "message": "Hola, quisiera consultar el costo de una lectura de numerología."
       },
       {
-        "label": "¿Puedo cancelar mi membresía?",
-        "message": "Hola, quisiera conocer las condiciones para cancelar la membresía VIP_CLUB."
+        "label": "¿Qué es un número maestro?",
+        "message": "Hola, quisiera saber qué es un número maestro."
       }
     ]
   },
   "footer": {
-    "phone": "900000000",
-    "email": "contacto@vipclub.example",
-    "copyright": "©2026 - VIP_CLUB",
+    "phone": "918131928",
+    "email": "contacto@astrodata.com",
+    "copyright": "©2026 - Astrodata",
     "socialNetworks": [
       {
         "platform": "Facebook",

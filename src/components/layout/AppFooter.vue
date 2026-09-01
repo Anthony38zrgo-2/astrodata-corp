@@ -10,7 +10,7 @@ import { siteData } from "@/constants/company";
           <strong>{{ siteData.brand.name }}</strong>
           <small>{{ siteData.brand.tagline }}</small>
         </a>
-        <p>Un club privado de experiencias exclusivas y acompañamiento a tu medida.</p>
+        <p>Numerología pitagórica y lectura personalizada de tu fecha de nacimiento.</p>
         <nav class="footer-nav" aria-label="Navegación del pie de página">
           <a v-for="item in siteData.navigation" :key="item.href" :href="item.href">{{ item.label }}</a>
         </nav>

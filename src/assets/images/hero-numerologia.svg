@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 600" width="480" height="600">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f6f1e5"/>
+      <stop offset="1" stop-color="#faf9f6"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e6c96b"/>
+      <stop offset="0.5" stop-color="#d4af37"/>
+      <stop offset="1" stop-color="#9a7b1f"/>
+    </linearGradient>
+    <clipPath id="clip"><circle cx="240" cy="270" r="205"/></clipPath>
+  </defs>
+
+  <rect width="480" height="600" fill="url(#bg)"/>
+
+  <g clip-path="url(#clip)">
+    <circle cx="240" cy="270" r="205" fill="none" stroke="#d4af37" stroke-opacity="0.28" stroke-width="1.5"/>
+    <circle cx="240" cy="270" r="168" fill="none" stroke="#d4af37" stroke-opacity="0.18" stroke-width="1"/>
+    <circle cx="240" cy="270" r="132" fill="none" stroke="#d4af37" stroke-opacity="0.12" stroke-width="1"/>
+    <circle cx="240" cy="270" r="96" fill="none" stroke="#d4af37" stroke-opacity="0.22" stroke-width="1"/>
+    <circle cx="240" cy="270" r="60" fill="none" stroke="url(#gold)" stroke-width="2"/>
+    <circle cx="240" cy="270" r="5" fill="url(#gold)"/>
+    <path d="M240 226 L262 262 L336 270 L262 278 L240 314 L218 278 L144 270 L218 262 Z" fill="#d4af37" opacity="0.9"/>
+  </g>
+
+  <g fill="#b3902f" opacity="0.9">
+    <text x="240" y="172" text-anchor="middle" font-family="Georgia, serif" font-size="56" font-weight="700" letter-spacing="10">ASTRODATA</text>
+    <text x="240" y="204" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" letter-spacing="6" fill="#6f6a5f">NUMEROLOGIA</text>
+  </g>
+
+  <g font-family="Georgia, serif" fill="#1b1a17" opacity="0.85">
+    <text x="240" y="520" text-anchor="middle" font-size="34" letter-spacing="14"><tspan>1</tspan><tspan x="300">2</tspan><tspan x="360">3</tspan></text>
+  </g>
+</svg>

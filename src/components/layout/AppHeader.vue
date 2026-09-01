@@ -1,11 +1,9 @@
 <script setup>
 import { ref } from "vue";
 import { siteData } from "@/constants/company";
-import { useWhatsApp } from "@/composables/useWhatsApp";
 
 const menuOpen = ref(false);
-const { whatsappUrl } = useWhatsApp();
-const imageModules = import.meta.glob("../../assets/images/*.webp", {
+const imageModules = import.meta.glob("../../assets/images/*.{webp,svg}", {
   eager: true,
   import: "default",
 });
@@ -42,11 +40,10 @@ const logoImage = imageModules[`../../assets/images/${siteData.brand.headerLogo}
 
       <a
         class="header-cta"
-        :href="whatsappUrl"
-        target="_blank"
-        rel="noopener noreferrer"
+        href="#calculadora"
+        @click="menuOpen = false"
       >
-        Solicitar orientación
+        Calcular mi número
       </a>
 
       <button

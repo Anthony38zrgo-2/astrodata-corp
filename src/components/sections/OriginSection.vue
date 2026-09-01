@@ -15,7 +15,7 @@ const getImage = (imageName) => imageModules[`../../assets/images/${imageName}`]
   <section id="recursos" class="resources-section" aria-labelledby="resources-title">
     <div class="section-container">
       <header class="resource-heading">
-        <p class="section-kicker">Conoce, comprende, cuida</p>
+        <p class="section-kicker">Astrodata, numerología práctica</p>
         <h2 id="resources-title">{{ siteData.resources.title }}</h2>
       </header>
       <div class="resource-grid">
@@ -32,7 +32,7 @@ const getImage = (imageName) => imageModules[`../../assets/images/${imageName}`]
           <img :src="getImage(resource.image)" :alt="resource.imageAlt" loading="lazy" />
           <div class="resource-overlay"></div>
           <div class="resource-content">
-            <span>Recurso 0{{ index + 1 }}</span>
+            <span>Número 0{{ index + 1 }}</span>
             <h3>{{ resource.title }}</h3>
             <a href="#contacto">{{ resource.buttonLabel }} <i aria-hidden="true">↗</i></a>
           </div>

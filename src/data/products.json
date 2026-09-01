@@ -1,23 +1,29 @@
 {
   "header": {
-    "title": "¿Qué te ofrecemos?",
-    "subtitle": "Experiencias VIP_CLUB"
+    "title": "Servicios de numerología",
+    "subtitle": "¿Qué te ofrecemos?"
   },
   "items": [
     {
-      "id": "acceso-vip",
-      "title": "Acceso VIP",
-      "description": "Acceso anticipado a lanzamientos, eventos y espacios reservados, con un tratamiento preferente para cada miembro.",
+      "id": "sesion-numerologia",
+      "title": "Sesión de Numerología",
+      "description": "Una lectura completa de tu fecha de nacimiento y tu número personal, con interpretación de tu energía, tus ciclos y una guía clara para tu momento actual.",
+      "price": "S/ 650",
+      "priceNote": "Sesión individual",
+      "priceUnit": "por sesión",
       "image": "service-1.svg",
-      "imageAlt": "Acceso anticipado VIP con trato preferente",
+      "imageAlt": "Sesión individual de numerología con lectura de tu número personal",
       "visualVariant": "rectangular"
     },
     {
-      "id": "concierge",
-      "title": "Concierge Personal",
-      "description": "Un equipo dedicado disponible las 24 horas para resolver, gestionar y coordinar cada detalle de tu experiencia.",
+      "id": "curso-numerologia",
+      "title": "Curso de Numerología",
+      "description": "Aprende a interpretar la energía de tu fecha de nacimiento paso a paso. Un recorrido práctico y ordenado para entender y aplicar la numerología a tu vida.",
+      "price": "S/ 750",
+      "priceNote": "Curso completo",
+      "priceUnit": "inscripción",
       "image": "service-2.svg",
-      "imageAlt": "Concierge personal disponible 24/7",
+      "imageAlt": "Curso de numerología para aprender a leer tu número personal",
       "visualVariant": "capsule"
     }
   ]

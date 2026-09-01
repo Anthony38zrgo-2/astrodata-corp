@@ -13,7 +13,7 @@ const imageModules = import.meta.glob([
 const getImage = (imageName) => imageModules[`../../assets/images/${imageName}`];
 const { createWhatsAppUrl } = useWhatsApp();
 const getServiceMessage = (service) =>
-  `Hola, quisiera recibir información sobre el servicio de ${service.title} de VIP_CLUB.`;
+  `Hola, quisiera recibir información sobre ${service.title} (${service.price}) de Astrodata.`;
 </script>
 
 <template>
@@ -41,6 +41,11 @@ const getServiceMessage = (service) =>
           <div class="service-body">
             <h3>{{ service.title }}</h3>
             <p>{{ service.description }}</p>
+            <div class="service-price" aria-label="Precio del servicio">
+              <span class="price">{{ service.price }}</span>
+              <span v-if="service.priceNote" class="unit">{{ service.priceNote }} · {{ service.priceUnit }}</span>
+              <span v-else class="unit">{{ service.priceUnit }}</span>
+            </div>
             <a
               class="service-whatsapp"
               :href="createWhatsAppUrl(getServiceMessage(service))"

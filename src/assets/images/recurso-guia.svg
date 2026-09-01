@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 620" width="600" height="620">
+  <defs>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e6c96b"/>
+      <stop offset="0.5" stop-color="#d4af37"/>
+      <stop offset="1" stop-color="#9a7b1f"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="620" fill="#f6f1e5"/>
+  <g font-family="Arial, sans-serif" fill="#1b1a17" font-size="30">
+    <text x="180" y="220" text-anchor="middle">1</text>
+    <text x="180" y="300" text-anchor="middle">2</text>
+    <text x="180" y="380" text-anchor="middle">3</text>
+    <text x="180" y="460" text-anchor="middle">4</text>
+  </g>
+  <g stroke="#6f6a5f" stroke-opacity="0.35" stroke-width="2"><line x1="80" y1="220" x2="140" y2="220"/></g>
+  <g font-family="Arial, sans-serif" fill="#6f6a5f" font-size="17">
+    <text x="200" y="228" text-anchor="start">Liderazgo</text>
+    <text x="200" y="308" text-anchor="start">Cooperacion</text>
+    <text x="200" y="388" text-anchor="start">Expresion</text>
+    <text x="200" y="468" text-anchor="start">Orden</text>
+  </g>
+  <circle cx="470" cy="440" r="90" fill="#faf9f6" stroke="url(#gold)" stroke-width="2"/>
+  <path d="M470 400 L488 430 L536 436 L488 442 L470 472 L452 442 L404 436 L452 430 Z" fill="#d4af37"/>
+</svg>

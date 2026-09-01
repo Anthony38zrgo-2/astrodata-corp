@@ -14,7 +14,7 @@ const getImage = (imageName) =>
 </script>
 
 <template>
-  <section id="nosotros" class="about-section" aria-label="Sobre VIP_CLUB">
+  <section id="nosotros" class="about-section" aria-label="Sobre Astrodata">
     <div class="section-container">
       <article class="philosophy-block">
         <div class="copy-panel">
@@ -26,7 +26,7 @@ const getImage = (imageName) =>
             </p>
           </div>
           <div class="care-note">
-            <span aria-hidden="true">✦</span> Comprenderte también es cuidarte.
+            <span aria-hidden="true">✦</span> Conocerte también es comprenderte.
           </div>
         </div>
         <figure class="calm-visual">

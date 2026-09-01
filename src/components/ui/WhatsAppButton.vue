@@ -3,7 +3,7 @@ import { computed, onBeforeUnmount, onMounted, ref } from "vue";
 import { siFacebook, siInstagram, siTiktok } from "simple-icons";
 import { siteData } from "@/constants/company";
 import { useWhatsApp } from "@/composables/useWhatsApp";
-import conciergeIllustration from "@/assets/images/concierge-vip.svg";
+import panelIllustration from "@/assets/images/hero-numerologia.svg";
 
 const panelOpen = ref(false);
 const customMessage = ref("");
@@ -76,19 +76,19 @@ onBeforeUnmount(() => document.removeEventListener("keydown", handleEscape));
           </svg>
         </span>
         <div>
-          <p>VIP_CLUB</p>
+          <p>Astrodata</p>
           <span>En línea</span>
         </div>
       </div>
       <div class="whatsapp-panel-body">
         <figure class="whatsapp-panel-visual">
           <img
-            :src="conciergeIllustration"
-            alt="Ilustración de un concierge VIP de VIP_CLUB"
+            :src="panelIllustration"
+            alt="Ilustración de numerología de Astrodata"
             width="480"
             height="600"
           />
-          <figcaption>Un concierge a tu servicio</figcaption>
+          <figcaption>Tu número te está esperando</figcaption>
         </figure>
 
         <div class="whatsapp-panel-content">
@@ -133,7 +133,7 @@ onBeforeUnmount(() => document.removeEventListener("keydown", handleEscape));
   <nav
     class="floating-socials"
     :class="{ 'is-hidden': panelOpen }"
-    aria-label="Redes sociales de VIP_CLUB"
+    aria-label="Redes sociales de Astrodata"
   >
     <a
       v-for="network in floatingSocialNetworks"
@@ -142,7 +142,7 @@ onBeforeUnmount(() => document.removeEventListener("keydown", handleEscape));
       :href="network.url"
       target="_blank"
       rel="noopener noreferrer"
-      :aria-label="`Visitar VIP_CLUB en ${network.platform}`"
+      :aria-label="`Visitar Astrodata en ${network.platform}`"
       :title="network.platform"
     >
       <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
