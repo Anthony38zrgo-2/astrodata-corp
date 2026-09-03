@@ -1,17 +1,40 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 440" width="600" height="440">
-  <defs>
-    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#e6c96b"/>
-      <stop offset="0.5" stop-color="#d4af37"/>
-      <stop offset="1" stop-color="#9a7b1f"/>
-    </linearGradient>
-  </defs>
-  <rect width="600" height="440" fill="#f6f1e5"/>
-  <rect x="120" y="140" width="360" height="160" rx="80" fill="#faf9f6" stroke="url(#gold)" stroke-width="2"/>
-  <g font-family="Georgia, serif" fill="#b3902f" font-size="30">
-    <text x="190" y="235" text-anchor="middle">1</text>
-    <text x="300" y="235" text-anchor="middle">2</text>
-    <text x="410" y="235" text-anchor="middle">3</text>
+  <rect width="600" height="440" fill="#ffffff"/>
+
+  <!-- Anillos concéntricos del cuadrante circular centrados en x=300, y=195 (grosor aumentado) -->
+  <circle cx="300" cy="195" r="145" fill="none" stroke="#d4af37" stroke-opacity="0.85" stroke-width="3.5"/>
+  <circle cx="300" cy="195" r="105" fill="none" stroke="#d4af37" stroke-opacity="0.75" stroke-width="3"/>
+
+  <!-- Marcas radiales horarias simétricas a 120 grados -->
+  <g stroke="#d4af37" stroke-width="3.5" stroke-linecap="round">
+    <line x1="300" y1="50" x2="300" y2="38"/>
+    <line x1="425.6" y1="267.5" x2="435.0" y2="273.0"/>
+    <line x1="174.4" y1="267.5" x2="165.0" y2="273.0"/>
   </g>
-  <path d="M300 320 L316 352 L372 358 L316 364 L300 396 L284 364 L228 358 L284 352 Z" fill="#d4af37"/>
+
+  <!-- Números 1, 2, 3 distribuidos simétricamente en la circunferencia a 120 grados -->
+  <g font-family="'DM Serif Display', Georgia, serif" font-size="36" fill="#0b1b3d" text-anchor="middle" dominant-baseline="central">
+    <text x="300.0" y="70.0">1</text>
+    <text x="408.3" y="257.5">2</text>
+    <text x="191.7" y="257.5">3</text>
+  </g>
+
+  <!-- Triángulo sagrado sutil que conecta los números 1, 2, 3 (Trígono AstroKab) -->
+  <polygon points="300,92 388,245 212,245" fill="none" stroke="#d4af37" stroke-opacity="0.35" stroke-width="2" stroke-dasharray="4 4"/>
+
+  <!-- Medallón central simétrico con estrella dorada de Astrodatha -->
+  <circle cx="300" cy="195" r="48" fill="#f4f6f9" stroke="#d4af37" stroke-width="3.5"/>
+  <path d="M300 162 L312 189 L344 195 L312 201 L300 228 L288 201 L256 195 L288 189 Z" fill="#d4af37"/>
+  <circle cx="300" cy="195" r="4" fill="#0b1b3d"/>
+
+  <!-- Leyenda simétrica 'MAPA ASTRAL · KABBALAH' -->
+  <text x="300" y="372" text-anchor="middle" font-family="'DM Sans', Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="4" fill="#475569">MAPA ASTRAL · KABBALAH</text>
+
+  <!-- Puntos cardinales simétricos (distancia 200px a cada lado del centro) -->
+  <g fill="#d4af37">
+    <circle cx="100" cy="115" r="3"/>
+    <circle cx="500" cy="115" r="3"/>
+    <circle cx="100" cy="315" r="3"/>
+    <circle cx="500" cy="315" r="3"/>
+  </g>
 </svg>

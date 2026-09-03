@@ -20,11 +20,14 @@ const getImage = (imageName) =>
 </script>
 
 <template>
-  <section id="filosofia" class="about-section" aria-label="Filosofía y Guía Astrodatha">
+  <section
+    id="filosofia"
+    class="about-section"
+    aria-label="Filosofía y Guía Astrodatha"
+  >
     <div class="section-container">
       <article class="philosophy-block">
         <div class="copy-panel">
-          <p class="section-kicker">{{ philosophy.subtitle }}</p>
           <h2>{{ philosophy.title }}</h2>
           <div class="prose-copy">
             <p v-for="paragraph in philosophy.paragraphs" :key="paragraph">
@@ -39,7 +42,10 @@ const getImage = (imageName) =>
 
           <!-- Desglose de fecha manuscrito (Día, Mes, Año) -->
           <div v-if="philosophy.birthBreakdown" class="birth-breakdown-panel">
-            <p class="breakdown-subtitle">{{ philosophy.birthBreakdown.title }} · <small>{{ philosophy.birthBreakdown.exampleNote }}</small></p>
+            <p class="breakdown-subtitle">
+              {{ philosophy.birthBreakdown.title }} ·
+              <small>{{ philosophy.birthBreakdown.exampleNote }}</small>
+            </p>
             <div class="breakdown-grid">
               <div
                 v-for="item in philosophy.birthBreakdown.items"
@@ -68,14 +74,14 @@ const getImage = (imageName) =>
           <img
             :src="getImage(founder.image)"
             :alt="founder.imageAlt"
+            width="768"
+            height="1024"
             loading="lazy"
           />
         </figure>
         <div class="founder-copy">
-          <p class="section-kicker">{{ founder.subtitle }}</p>
           <h2>{{ founder.title }}</h2>
           <h3>{{ founder.name }}</h3>
-          <p v-if="founder.role" class="founder-role">{{ founder.role }}</p>
           <div class="prose-copy founder-prose">
             <p v-for="paragraph in founder.paragraphs" :key="paragraph">
               {{ paragraph }}
@@ -93,7 +99,9 @@ const getImage = (imageName) =>
           />
         </figure>
         <div class="virtual-copy">
-          <p class="section-kicker">{{ virtualCare.subtitle || 'Atención personalizada' }}</p>
+          <p class="section-kicker">
+            {{ virtualCare.subtitle || "Atención personalizada" }}
+          </p>
           <h2>{{ virtualCare.title }}</h2>
           <p>{{ virtualCare.description }}</p>
           <a
@@ -102,7 +110,8 @@ const getImage = (imageName) =>
             rel="noopener noreferrer"
             class="text-link"
           >
-            {{ virtualCare.buttonLabel || 'Conversemos' }} <span aria-hidden="true">→</span>
+            {{ virtualCare.buttonLabel || "Conversemos" }}
+            <span aria-hidden="true">→</span>
           </a>
         </div>
       </article>

@@ -1,19 +1,23 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" width="480" height="480">
   <defs>
-    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#e6c96b"/>
-      <stop offset="0.5" stop-color="#d4af37"/>
-      <stop offset="1" stop-color="#9a7b1f"/>
-    </linearGradient>
     <clipPath id="c"><circle cx="240" cy="240" r="190"/></clipPath>
   </defs>
-  <rect width="480" height="480" fill="#f6f1e5"/>
-  <g clip-path="url(#c)" fill="#faf9f6">
-    <circle cx="240" cy="200" r="86" fill="#e8e0cf"/>
-    <path d="M120 470 C140 320 200 300 240 290 C280 300 340 320 360 470 Z" fill="#dcd3bf"/>
+  <rect width="480" height="480" fill="#ffffff"/>
+
+  <!-- Aro circular exterior centrado en x=240, y=240 (grosor aumentado) -->
+  <circle cx="240" cy="240" r="190" fill="none" stroke="#d4af37" stroke-opacity="0.85" stroke-width="3.5"/>
+
+  <!-- Silueta ilustrada simétrica centrada en x=240 -->
+  <g clip-path="url(#c)" fill="#f4f6f9">
+    <circle cx="240" cy="200" r="86" fill="#e2e8f0"/>
+    <path d="M120 470 C140 320 200 300 240 290 C280 300 340 320 360 470 Z" fill="#cbd5e1"/>
   </g>
-  <ellipse cx="240" cy="470" rx="150" ry="22" fill="#b3902f" opacity="0.18"/>
-  <circle cx="240" cy="200" r="86" fill="none" stroke="url(#gold)" stroke-width="2"/>
-  <circle cx="240" cy="198" r="22" fill="none" stroke="url(#gold)" stroke-width="2"/>
+
+  <ellipse cx="240" cy="470" rx="150" ry="22" fill="#d4af37" opacity="0.15"/>
+  <circle cx="240" cy="200" r="86" fill="none" stroke="#d4af37" stroke-width="3.5"/>
+  <circle cx="240" cy="200" r="22" fill="none" stroke="#d4af37" stroke-width="3.5"/>
+
+  <!-- Estrella dorada central exactamente simétrica en x=240, y=200 -->
   <path d="M240 180 L248 198 L300 200 L248 202 L240 220 L232 202 L180 200 L232 198 Z" fill="#d4af37"/>
+  <circle cx="240" cy="200" r="3.5" fill="#0b1b3d"/>
 </svg>

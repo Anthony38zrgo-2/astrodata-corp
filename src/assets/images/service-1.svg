@@ -1,18 +1,26 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 440" width="600" height="440">
-  <defs>
-    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#e6c96b"/>
-      <stop offset="0.5" stop-color="#d4af37"/>
-      <stop offset="1" stop-color="#9a7b1f"/>
-    </linearGradient>
-  </defs>
-  <rect width="600" height="440" fill="#f6f1e5"/>
-  <circle cx="300" cy="220" r="150" fill="none" stroke="#d4af37" stroke-opacity="0.25" stroke-width="1.5"/>
-  <circle cx="300" cy="220" r="112" fill="none" stroke="#d4af37" stroke-opacity="0.15" stroke-width="1"/>
-  <g font-family="Georgia, serif" fill="#1b1a17">
-    <text x="300" y="180" text-anchor="middle" font-size="38">7</text>
-    <text x="300" y="292" text-anchor="middle" font-size="20" fill="#6f6a5f">Tu numero</text>
+  <rect width="600" height="440" fill="#ffffff"/>
+
+  <!-- Anillos concéntricos simétricos centrados en x=300, y=195 (grosor aumentado) -->
+  <circle cx="300" cy="195" r="145" fill="none" stroke="#d4af37" stroke-opacity="0.85" stroke-width="3.5"/>
+  <circle cx="300" cy="195" r="105" fill="none" stroke="#d4af37" stroke-opacity="0.75" stroke-width="3"/>
+
+  <!-- Medallón central simétrico con número 7 -->
+  <circle cx="300" cy="170" r="46" fill="#f4f6f9" stroke="#d4af37" stroke-width="3.5"/>
+  <text x="300" y="170" text-anchor="middle" dominant-baseline="central" font-family="'DM Serif Display', Georgia, serif" font-size="46" fill="#0b1b3d">7</text>
+
+  <!-- Leyenda simétrica 'TU NÚMERO' -->
+  <text x="300" y="240" text-anchor="middle" font-family="'DM Sans', Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="4" fill="#475569">TU NÚMERO</text>
+
+  <!-- Estrella dorada inferior simétrica centrada en x=300, y=315 -->
+  <path d="M300 282 L312 309 L348 315 L312 321 L300 348 L288 321 L252 315 L288 309 Z" fill="#d4af37"/>
+  <circle cx="300" cy="315" r="3.5" fill="#0b1b3d"/>
+
+  <!-- Puntos cardinales simétricos (distancia 200px a cada lado del centro) -->
+  <g fill="#d4af37">
+    <circle cx="100" cy="115" r="3"/>
+    <circle cx="500" cy="115" r="3"/>
+    <circle cx="100" cy="315" r="3"/>
+    <circle cx="500" cy="315" r="3"/>
   </g>
-  <path d="M300 130 L316 162 L372 168 L316 174 L300 206 L284 174 L228 168 L284 162 Z" fill="#d4af37" opacity="0.9"/>
-  <g fill="#b3902f"><circle cx="88" cy="120" r="3"/><circle cx="512" cy="120" r="3"/><circle cx="88" cy="320" r="3"/><circle cx="512" cy="320" r="3"/></g>
 </svg>

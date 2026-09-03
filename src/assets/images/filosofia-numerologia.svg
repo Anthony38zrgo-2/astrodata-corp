@@ -1,25 +1,51 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" width="480" height="480">
-  <defs>
-    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#e6c96b"/>
-      <stop offset="0.5" stop-color="#d4af37"/>
-      <stop offset="1" stop-color="#9a7b1f"/>
-    </linearGradient>
-  </defs>
-  <rect width="480" height="480" fill="#f6f1e5"/>
-  <circle cx="240" cy="240" r="170" fill="none" stroke="#d4af37" stroke-opacity="0.25" stroke-width="1.5"/>
-  <circle cx="240" cy="240" r="132" fill="none" stroke="#d4af37" stroke-opacity="0.15" stroke-width="1"/>
-  <g font-family="Georgia, serif" fill="#1b1a17">
-    <text x="85" y="255" text-anchor="middle" font-size="44">1</text>
-    <text x="162" y="175" text-anchor="middle" font-size="44">2</text>
-    <text x="300" y="128" text-anchor="middle" font-size="44">3</text>
-    <text x="398" y="215" text-anchor="middle" font-size="44">4</text>
-    <text x="452" y="300" text-anchor="middle" font-size="44">5</text>
-    <text x="380" y="392" text-anchor="middle" font-size="44">6</text>
-    <text x="262" y="446" text-anchor="middle" font-size="44">7</text>
-    <text x="138" y="430" text-anchor="middle" font-size="44">8</text>
-    <text x="52" y="380" text-anchor="middle" font-size="44">9</text>
+  <rect width="480" height="480" fill="#ffffff"/>
+
+  <!-- Anillos del cuadrante del reloj (grosor aumentado) -->
+  <circle cx="240" cy="240" r="202" fill="none" stroke="#d4af37" stroke-opacity="0.85" stroke-width="3.5"/>
+  <circle cx="240" cy="240" r="130" fill="none" stroke="#d4af37" stroke-opacity="0.75" stroke-width="3"/>
+
+  <!-- Marcas horarias tipo reloj (ticks radiales de 40 grados) -->
+  <g stroke="#d4af37" stroke-width="3" stroke-linecap="round" opacity="0.9">
+    <line x1="240.0" y1="38.0" x2="240.0" y2="28.0"/>
+    <line x1="369.8" y1="85.3" x2="376.3" y2="77.6"/>
+    <line x1="438.9" y1="204.9" x2="448.8" y2="203.2"/>
+    <line x1="414.9" y1="341.0" x2="423.6" y2="346.0"/>
+    <line x1="309.1" y1="429.8" x2="312.5" y2="439.2"/>
+    <line x1="170.9" y1="429.8" x2="167.5" y2="439.2"/>
+    <line x1="65.1" y1="341.0" x2="56.4" y2="346.0"/>
+    <line x1="41.1" y1="204.9" x2="31.2" y2="203.2"/>
+    <line x1="110.2" y1="85.3" x2="103.7" y2="77.6"/>
   </g>
-  <circle cx="240" cy="240" r="70" fill="none" stroke="url(#gold)" stroke-width="2"/>
-  <path d="M240 205 L256 234 L300 240 L256 246 L240 275 L224 246 L180 240 L224 234 Z" fill="#d4af37"/>
+
+  <!-- Puntos guía en el anillo interior -->
+  <g fill="#d4af37" opacity="0.5">
+    <circle cx="240.0" cy="110.0" r="2.5"/>
+    <circle cx="323.6" cy="140.4" r="2.5"/>
+    <circle cx="368.0" cy="217.4" r="2.5"/>
+    <circle cx="352.6" cy="305.0" r="2.5"/>
+    <circle cx="284.5" cy="362.2" r="2.5"/>
+    <circle cx="195.5" cy="362.2" r="2.5"/>
+    <circle cx="127.4" cy="305.0" r="2.5"/>
+    <circle cx="112.0" cy="217.4" r="2.5"/>
+    <circle cx="156.4" cy="140.4" r="2.5"/>
+  </g>
+
+  <!-- Números alineados radialmente en sentido horario de reloj (1 al 9, 9 en el ápice) -->
+  <g font-family="'DM Serif Display', Georgia, serif" font-size="38" font-weight="normal" fill="#0b1b3d" text-anchor="middle" dominant-baseline="central">
+    <text x="240.0" y="74.0">9</text>
+    <text x="346.7" y="112.8">1</text>
+    <text x="403.5" y="211.2">2</text>
+    <text x="383.8" y="323.0">3</text>
+    <text x="296.8" y="396.0">4</text>
+    <text x="183.2" y="396.0">5</text>
+    <text x="96.2" y="323.0">6</text>
+    <text x="76.5" y="211.2">7</text>
+    <text x="133.3" y="112.8">8</text>
+  </g>
+
+  <!-- Núcleo central con estrella dorada de Astrodatha -->
+  <circle cx="240" cy="240" r="64" fill="none" stroke="#d4af37" stroke-width="3.5"/>
+  <circle cx="240" cy="240" r="6" fill="#d4af37"/>
+  <path d="M240 196 L254 234 L296 240 L254 246 L240 284 L226 246 L184 240 L226 234 Z" fill="#d4af37"/>
 </svg>

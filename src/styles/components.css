@@ -8,8 +8,8 @@
   }
 
   body {
-    @apply m-0 min-w-80 bg-soft-white font-sans text-ink antialiased;
-    background-color: var(--palette-warm-white);
+    @apply m-0 min-w-80 bg-bg-base font-sans text-ink antialiased;
+    background-color: var(--palette-background);
   }
 
   body,
@@ -33,11 +33,11 @@
   }
 
   :focus-visible {
-    @apply outline-2 outline-offset-4 outline-coexistir-active;
+    @apply outline-2 outline-offset-4 outline-gold;
   }
 
   ::selection {
-    @apply bg-coexistir-active/20 text-coexistir-900;
+    @apply bg-gold/25 text-navy-900;
   }
 
   section {
@@ -46,14 +46,11 @@
 }
 
 @layer components {
-  /* Layout Base */
+  /* Layout Base Flat */
   .page-shell,
   #app {
     @apply min-h-screen;
-    background:
-      radial-gradient(circle at 10% 0%, rgb(212 175 55 / 0.08), transparent 32rem),
-      radial-gradient(circle at 90% 20%, rgb(110 26 44 / 0.04), transparent 28rem),
-      var(--palette-warm-white);
+    background: var(--palette-background);
   }
 
   .site-main {
@@ -65,15 +62,15 @@
   }
 
   .section-kicker {
-    @apply mb-4 inline-flex items-center gap-2 rounded-full border border-coexistir-active/40 bg-white/80 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-coexistir-700 shadow-xs backdrop-blur-md;
+    @apply mb-4 inline-flex items-center gap-2 rounded-full border border-navy-900/15 bg-white px-4 py-1.5 text-xs font-bold uppercase tracking-[0.16em] text-navy-900;
   }
 
   .section-heading {
-    @apply mb-12 flex flex-col justify-between gap-5 border-b border-line pb-8 md:flex-row md:items-end;
+    @apply mb-8 sm:mb-10 flex flex-col justify-between gap-4 border-b border-line pb-6 md:flex-row md:items-end;
   }
 
   .section-heading h2 {
-    @apply font-display text-4xl font-normal tracking-[-0.025em] text-coexistir-900 sm:text-5xl;
+    @apply font-display text-3xl font-normal tracking-tight text-navy-900 sm:text-4xl lg:text-5xl;
   }
 
   .section-heading p:last-child {
@@ -81,10 +78,10 @@
   }
 
   /* ==========================================================================
-     CABECERA (SITE HEADER)
+     CABECERA (SITE HEADER) - FLAT DESIGN
      ========================================================================== */
   .site-header {
-    @apply sticky top-0 z-50 border-b border-white/15 bg-coexistir-900/95 text-white shadow-soft backdrop-blur-2xl transition-all duration-300;
+    @apply sticky top-0 z-50 border-b border-white/10 bg-navy-900 text-white transition-all duration-200;
   }
 
   .header-inner {
@@ -96,7 +93,7 @@
   }
 
   .brand-logo {
-    @apply size-11 shrink-0 rounded-xl border border-white/20 bg-white/10 p-1 shadow-card;
+    @apply size-11 shrink-0 rounded-xl border border-white/20 bg-navy-700 p-1;
   }
 
   .brand-copy {
@@ -108,11 +105,11 @@
   }
 
   .brand-copy small {
-    @apply text-[0.68rem] font-medium tracking-wider text-coexistir-active;
+    @apply text-[0.68rem] font-medium tracking-wider text-gold;
   }
 
   .side-nav {
-    @apply fixed inset-x-4 top-24 hidden flex-col gap-1 rounded-2xl border border-white/15 bg-coexistir-900/98 p-4 shadow-soft backdrop-blur-2xl lg:static lg:flex lg:flex-row lg:items-center lg:gap-1.5 lg:border-0 lg:bg-transparent lg:p-0 lg:shadow-none;
+    @apply fixed inset-x-4 top-24 hidden flex-col gap-1 rounded-xl border border-white/15 bg-navy-900 p-4 lg:static lg:flex lg:flex-row lg:items-center lg:gap-1.5 lg:border-0 lg:bg-transparent lg:p-0;
   }
 
   .site-header.is-open .side-nav {
@@ -120,11 +117,11 @@
   }
 
   .side-nav a {
-    @apply rounded-full px-4 py-2 text-sm font-semibold text-white/85 transition hover:bg-white/10 hover:text-coexistir-active;
+    @apply rounded-full px-4 py-2 text-sm font-semibold text-white/90 transition hover:bg-white/10 hover:text-gold;
   }
 
   .header-cta {
-    @apply hidden min-h-11 items-center justify-center rounded-full border border-coexistir-active/50 bg-gradient-to-r from-coexistir-active to-[#b89327] px-5 text-xs font-bold uppercase tracking-wider text-coexistir-900 shadow-card transition hover:-translate-y-0.5 hover:shadow-soft hover:brightness-105 md:inline-flex;
+    @apply hidden min-h-11 items-center justify-center rounded-full border border-gold bg-gold px-5 text-xs font-bold uppercase tracking-wider text-navy-900 transition hover:bg-gold-hover md:inline-flex;
   }
 
   .menu-toggle {
@@ -136,17 +133,14 @@
   }
 
   /* ==========================================================================
-     HERO SECTION
+     HERO SECTION - FLAT DESIGN
      ========================================================================== */
   .hero {
-    @apply relative overflow-hidden py-16 sm:py-20 lg:py-24;
-    background:
-      radial-gradient(circle at 85% 15%, rgb(212 175 55 / 0.12), transparent 28rem),
-      radial-gradient(circle at 15% 75%, rgb(110 26 44 / 0.06), transparent 24rem);
+    @apply relative overflow-hidden bg-bg-base py-14 sm:py-18 lg:py-20;
   }
 
   .hero-inner {
-    @apply mx-auto grid w-full max-w-7xl items-center gap-12 px-5 sm:px-8 lg:grid-cols-12 lg:gap-16 lg:px-10;
+    @apply mx-auto grid w-full max-w-7xl items-center gap-10 px-5 sm:px-8 lg:grid-cols-12 lg:gap-14 lg:px-10;
   }
 
   .hero-content {
@@ -154,67 +148,67 @@
   }
 
   .hero-kicker {
-    @apply mb-5 inline-flex items-center gap-2 rounded-full border border-coexistir-active/40 bg-coexistir-active/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-coexistir-900 shadow-xs;
+    @apply mb-4 inline-flex items-center gap-2 rounded-full border border-gold/40 bg-white px-4 py-1.5 text-xs font-bold uppercase tracking-[0.16em] text-navy-900;
   }
 
   .hero-content h1 {
-    @apply max-w-xl font-display text-4xl font-normal leading-[1.08] tracking-[-0.03em] text-coexistir-900 sm:text-5xl lg:text-6xl;
+    @apply max-w-xl font-display text-4xl font-normal leading-[1.08] tracking-tight text-navy-900 sm:text-5xl lg:text-6xl;
   }
 
   .hero-description {
-    @apply mt-6 max-w-xl text-base leading-relaxed text-muted sm:text-lg;
+    @apply mt-5 max-w-xl text-base leading-relaxed text-muted sm:text-lg;
   }
 
   .hero-actions {
-    @apply mt-8 flex flex-col gap-3 sm:flex-row sm:items-center;
+    @apply mt-7 flex flex-col gap-3 sm:flex-row sm:items-center;
   }
 
   .button-primary {
-    @apply inline-flex min-h-13 items-center justify-center gap-3 rounded-full border border-coexistir-700 bg-coexistir-700 px-7 text-sm font-bold text-white shadow-soft transition hover:-translate-y-0.5 hover:bg-coexistir-500 hover:shadow-card;
+    @apply inline-flex min-h-12 items-center justify-center gap-3 rounded-full border-2 border-navy-900 bg-navy-900 px-7 text-sm font-bold text-white transition hover:border-navy-700 hover:bg-navy-700;
   }
 
   .button-secondary {
-    @apply inline-flex min-h-13 items-center justify-center gap-3 rounded-full border border-coexistir-900/20 bg-white px-7 text-sm font-semibold text-coexistir-900 shadow-xs transition hover:-translate-y-0.5 hover:border-coexistir-700 hover:bg-sage-100;
+    @apply inline-flex min-h-12 items-center justify-center gap-3 rounded-full border-2 border-slate-300 bg-white px-7 text-sm font-bold text-navy-900 transition hover:border-navy-900 hover:bg-slate-50;
   }
 
   .hero-highlights {
-    @apply mt-10 grid list-none gap-3 p-0 sm:grid-cols-3;
+    @apply mt-8 grid list-none gap-3 p-0 sm:grid-cols-3;
   }
 
   .hero-highlights li {
-    @apply flex items-center gap-2.5 rounded-xl border border-coexistir-active/20 bg-white/80 px-3.5 py-2.5 text-xs font-semibold text-coexistir-900 shadow-xs backdrop-blur-xs;
+    @apply flex items-center gap-2.5 rounded-xl border border-line bg-white px-3.5 py-2.5 text-xs font-semibold text-navy-900;
   }
 
   .hero-highlights li > span {
-    @apply grid size-5 place-items-center rounded-full bg-coexistir-active/20 text-xs font-bold text-coexistir-700;
+    @apply grid size-5 place-items-center rounded-full bg-gold text-xs font-bold text-navy-900;
   }
 
   .hero-image-wrap {
-    @apply relative m-0 overflow-hidden rounded-[2.25rem] border border-coexistir-900/10 bg-white p-3 shadow-soft transition duration-500 hover:shadow-card lg:col-span-5;
+    @apply relative m-0 overflow-hidden rounded-2xl border border-line bg-white p-2 lg:col-span-5;
   }
 
   .hero-image-wrap img {
-    @apply h-auto w-full rounded-[1.75rem] object-cover transition duration-700 hover:scale-102;
+    @apply h-auto w-full rounded-xl object-cover;
   }
 
   .hero-image-wrap figcaption {
-    @apply absolute bottom-6 left-6 right-6 flex items-center justify-center gap-2.5 rounded-2xl border border-white/60 bg-white/95 px-4 py-3 text-center text-xs font-bold text-coexistir-900 shadow-card backdrop-blur-md;
+    @apply absolute bottom-5 left-5 right-5 flex items-center justify-center gap-2.5 rounded-xl border border-line bg-white px-4 py-3 text-center text-xs font-bold text-navy-900;
   }
 
   .status-dot {
-    @apply size-2.5 rounded-full bg-coexistir-active ring-4 ring-coexistir-active/20;
+    @apply size-2.5 rounded-full bg-gold;
   }
 
   .hero-stats {
-    @apply mx-auto mt-14 grid w-full max-w-7xl grid-cols-1 gap-4 px-5 sm:grid-cols-3 sm:px-8 lg:px-10;
+    @apply mx-auto mt-10 sm:mt-12 grid w-full max-w-7xl grid-cols-1 gap-4 px-5 sm:grid-cols-3 sm:px-8 lg:px-10;
   }
 
   .hero-stat {
-    @apply flex flex-col items-center rounded-2xl border border-coexistir-900/10 bg-white/80 p-5 text-center shadow-xs backdrop-blur-xs transition hover:border-coexistir-active/40;
+    @apply flex flex-col items-center rounded-xl border border-line bg-white p-5 text-center transition hover:border-navy-900;
   }
 
   .hero-stat strong {
-    @apply font-display text-3xl font-semibold text-coexistir-900 sm:text-4xl;
+    @apply font-display text-3xl font-semibold text-navy-900 sm:text-4xl;
   }
 
   .hero-stat span {
@@ -222,42 +216,42 @@
   }
 
   /* ==========================================================================
-     FILOSOFÍA, LEMA Y DESGLOSE CUÁNTICO
+     FILOSOFÍA, LEMA Y DESGLOSE CUÁNTICO - FLAT DESIGN
      ========================================================================== */
   .about-section {
-    @apply bg-white py-20 sm:py-24 lg:py-32;
+    @apply bg-white py-14 sm:py-18 lg:py-22;
   }
 
   .philosophy-block {
-    @apply grid overflow-hidden rounded-[2.25rem] border border-coexistir-900/10 bg-sage-100 shadow-card lg:grid-cols-12;
+    @apply grid overflow-hidden rounded-2xl border border-line bg-bg-base lg:grid-cols-12;
   }
 
   .copy-panel {
-    @apply flex flex-col justify-center p-7 sm:p-10 lg:col-span-7 lg:p-14;
+    @apply flex flex-col justify-center p-6 sm:p-8 lg:col-span-7 lg:p-10;
   }
 
   .copy-panel h2 {
-    @apply font-display text-3xl font-normal leading-tight tracking-tight text-coexistir-900 sm:text-4xl lg:text-5xl;
+    @apply font-display text-3xl font-normal leading-tight tracking-tight text-navy-900 sm:text-4xl;
   }
 
   .prose-copy {
-    @apply mt-6 space-y-4 text-base leading-relaxed text-muted;
+    @apply mt-4 space-y-3 text-base leading-relaxed text-muted;
   }
 
   .motto-banner {
-    @apply mt-8 flex w-fit items-center gap-2 rounded-full border border-coexistir-active/50 bg-white px-5 py-2 text-xs font-bold tracking-wide text-coexistir-900 shadow-xs;
+    @apply mt-6 flex w-fit items-center gap-2 rounded-full border border-gold bg-white px-4 py-1.5 text-xs font-bold tracking-wide text-navy-900;
   }
 
   .motto-star {
-    @apply text-base text-coexistir-active;
+    @apply text-base text-gold;
   }
 
   .birth-breakdown-panel {
-    @apply mt-8 rounded-2xl border border-coexistir-900/10 bg-white/85 p-5 shadow-xs;
+    @apply mt-6 rounded-xl border border-line bg-white p-4 sm:p-5;
   }
 
   .breakdown-subtitle {
-    @apply mb-4 text-xs font-bold uppercase tracking-wider text-coexistir-700;
+    @apply mb-3 text-xs font-bold uppercase tracking-wider text-navy-700;
   }
 
   .breakdown-grid {
@@ -265,7 +259,7 @@
   }
 
   .breakdown-item {
-    @apply flex flex-col items-center rounded-xl border border-coexistir-active/30 bg-white p-4 text-center transition duration-300 hover:border-coexistir-active hover:shadow-xs;
+    @apply flex flex-col items-center rounded-lg border border-line bg-white p-3.5 text-center transition hover:border-navy-900;
   }
 
   .breakdown-unit {
@@ -273,7 +267,7 @@
   }
 
   .breakdown-val {
-    @apply my-1 font-display text-3xl font-bold text-coexistir-900;
+    @apply my-1 font-display text-3xl font-bold text-navy-900;
   }
 
   .breakdown-title {
@@ -285,69 +279,69 @@
   }
 
   .calm-visual {
-    @apply relative m-0 flex min-h-[22rem] items-center justify-center overflow-hidden bg-sage-400 p-6 lg:col-span-5 lg:min-h-full;
+    @apply relative m-0 flex min-h-[16rem] sm:min-h-[18rem] items-center justify-center overflow-hidden border-t border-line bg-white p-6 lg:col-span-5 lg:min-h-full lg:border-t-0 lg:border-l;
   }
 
   .calm-visual img {
-    @apply h-auto max-h-[28rem] w-full max-w-sm rounded-2xl object-contain drop-shadow-md;
+    @apply h-auto max-h-[22rem] w-full max-w-sm rounded-xl object-contain;
   }
 
   /* ==========================================================================
-     SOBRE TU GUÍA (MARY MARÍN)
+     SOBRE TU GUÍA (MARY MARÍN) - FLAT DESIGN
      ========================================================================== */
   .founder-block {
-    @apply mt-12 grid overflow-hidden rounded-[2.25rem] border border-coexistir-900/10 bg-white shadow-card lg:grid-cols-12;
+    @apply mt-8 sm:mt-10 grid overflow-hidden rounded-2xl border border-line bg-white lg:grid-cols-12 lg:items-stretch;
   }
 
   .founder-portrait {
-    @apply relative m-0 flex min-h-[22rem] items-center justify-center overflow-hidden bg-sage-100 p-6 lg:col-span-5 lg:min-h-full;
+    @apply relative m-0 flex items-center justify-center border-b border-line bg-bg-base p-4 sm:p-6 lg:col-span-5 lg:border-b-0 lg:border-r lg:p-6 xl:p-8;
   }
 
   .founder-portrait img {
-    @apply h-auto max-h-[28rem] w-full max-w-sm rounded-2xl object-contain drop-shadow-md;
+    @apply block h-auto max-h-[28rem] w-full max-w-sm rounded-xl object-contain shadow-xs lg:max-h-[34rem] lg:max-w-none;
   }
 
   .founder-copy {
-    @apply flex flex-col justify-center p-7 sm:p-10 lg:col-span-7 lg:p-14;
+    @apply flex flex-col justify-center p-6 sm:p-8 lg:col-span-7 lg:p-10 xl:p-12;
   }
 
   .founder-copy h2 {
-    @apply font-display text-3xl font-normal leading-tight text-coexistir-900 sm:text-4xl;
+    @apply font-display text-3xl font-normal leading-tight text-navy-900 sm:text-4xl;
   }
 
   .founder-copy h3 {
-    @apply mt-4 font-display text-2xl font-normal text-coexistir-700;
+    @apply mt-2 font-display text-2xl font-normal text-navy-700;
   }
 
   .founder-role {
-    @apply mt-1.5 text-xs font-bold uppercase tracking-wider text-coexistir-active;
+    @apply mt-1 text-xs font-bold uppercase tracking-wider text-navy-900;
   }
 
   .founder-prose {
-    @apply mt-6 space-y-4 text-base leading-relaxed text-muted;
+    @apply mt-4 space-y-3 text-base leading-relaxed text-muted;
   }
 
   /* ==========================================================================
-     BLOQUE CITA PREVIA / VIRTUAL CARE
+     BLOQUE CITA PREVIA / VIRTUAL CARE - FLAT DESIGN
      ========================================================================== */
   .virtual-block {
-    @apply mt-12 grid overflow-hidden rounded-[2.25rem] border border-coexistir-900/20 bg-gradient-to-br from-coexistir-900 via-coexistir-900 to-[#3b0914] text-white shadow-soft lg:grid-cols-12;
+    @apply mt-8 sm:mt-10 grid overflow-hidden rounded-2xl border border-navy-900 bg-navy-900 text-white lg:grid-cols-12;
   }
 
   .calm-visual-dark {
-    @apply relative m-0 flex min-h-[18rem] items-center justify-center overflow-hidden p-6 lg:col-span-5 lg:min-h-full;
+    @apply relative m-0 flex min-h-[14rem] sm:min-h-[16rem] items-center justify-center overflow-hidden border-b border-white/10 p-6 lg:col-span-5 lg:min-h-full lg:border-b-0 lg:border-r;
   }
 
   .calm-visual-dark img {
-    @apply h-auto max-h-[20rem] w-full max-w-xs rounded-2xl object-contain brightness-95 filter;
+    @apply h-auto max-h-[16rem] w-full max-w-xs rounded-xl object-contain;
   }
 
   .virtual-copy {
-    @apply flex flex-col justify-center p-7 sm:p-10 lg:col-span-7 lg:p-14;
+    @apply flex flex-col justify-center p-6 sm:p-8 lg:col-span-7 lg:p-10;
   }
 
   .virtual-copy .section-kicker {
-    @apply border-white/20 bg-white/10 text-coexistir-active;
+    @apply border-white/20 bg-white/10 text-gold;
   }
 
   .virtual-copy h2 {
@@ -355,85 +349,73 @@
   }
 
   .virtual-copy p {
-    @apply mt-4 text-base leading-relaxed text-white/80;
+    @apply mt-3 text-base leading-relaxed text-white/85;
   }
 
   .text-link {
-    @apply mt-8 inline-flex w-fit items-center gap-3 rounded-full border border-coexistir-active bg-gradient-to-r from-coexistir-active to-[#b89327] px-6 py-3 text-xs font-bold uppercase tracking-wider text-coexistir-900 shadow-card transition hover:-translate-y-0.5 hover:shadow-soft hover:brightness-105;
+    @apply mt-6 inline-flex w-fit items-center gap-3 rounded-full border-2 border-gold bg-gold px-6 py-2.5 text-xs font-bold uppercase tracking-wider text-navy-900 transition hover:border-gold-hover hover:bg-gold-hover;
   }
 
   /* ==========================================================================
-     SERVICIOS (SESIÓN DE NUMEROLOGÍA & ASTROKAB)
+     SERVICIOS (SESIÓN DE NUMEROLOGÍA & ASTROKAB) - FLAT DESIGN
      ========================================================================== */
   .services-section {
-    @apply bg-soft-white py-20 sm:py-24 lg:py-32;
+    @apply bg-bg-base py-14 sm:py-18 lg:py-22;
   }
 
   .services-grid {
-    @apply grid gap-8 lg:grid-cols-2;
+    @apply grid gap-6 lg:grid-cols-2;
   }
 
   .service-card {
-    @apply relative flex flex-col overflow-hidden rounded-[2.25rem] border border-coexistir-900/10 bg-white shadow-card transition duration-500 hover:-translate-y-1 hover:border-coexistir-active/50 hover:shadow-soft;
+    @apply relative flex flex-col overflow-hidden rounded-2xl border border-line bg-white transition hover:border-navy-900;
   }
 
   .service-visual {
-    @apply relative m-0 flex h-60 items-center justify-center overflow-hidden bg-sage-100 p-6;
+    @apply relative m-0 flex h-48 sm:h-52 items-center justify-center overflow-hidden border-b border-line bg-white p-5;
   }
 
   .service-visual img {
-    @apply h-full w-auto object-contain transition duration-700 hover:scale-105;
+    @apply h-full w-auto object-contain;
   }
 
   .service-number {
-    @apply absolute right-5 top-5 grid size-10 place-items-center rounded-full border border-coexistir-active/30 bg-white font-display text-sm font-semibold text-coexistir-900 shadow-card;
+    @apply absolute right-4 top-4 grid size-9 place-items-center rounded-full border border-line bg-white font-display text-xs font-bold text-navy-900;
   }
 
   .service-body {
-    @apply flex flex-1 flex-col p-7 sm:p-9;
+    @apply flex flex-1 flex-col p-6 sm:p-7;
   }
 
   .service-meta {
-    @apply mb-3 flex items-center;
+    @apply mb-2 flex items-center;
   }
 
   .service-badge {
-    @apply rounded-full border border-coexistir-active/40 bg-coexistir-active/15 px-3.5 py-1 text-[0.7rem] font-bold uppercase tracking-wider text-coexistir-900;
+    @apply rounded-full border border-gold bg-gold/15 px-3 py-0.5 text-[0.68rem] font-bold uppercase tracking-wider text-navy-900;
   }
 
   .service-tagline {
-    @apply mb-2 text-xs font-bold text-coexistir-700;
+    @apply mb-1.5 text-xs font-bold text-navy-700;
   }
 
   .service-card h3 {
-    @apply font-display text-2xl font-normal leading-tight text-coexistir-900 sm:text-3xl;
+    @apply font-display text-2xl font-normal leading-snug text-navy-900;
   }
 
-  .service-card p {
-    @apply mt-3 flex-1 text-sm leading-relaxed text-muted;
-  }
-
-  .service-price {
-    @apply my-6 flex items-baseline gap-2 border-y border-line py-4;
-  }
-
-  .service-price .price {
-    @apply font-display text-4xl font-normal text-coexistir-900;
-  }
-
-  .service-price .unit {
-    @apply text-xs font-semibold uppercase tracking-wider text-muted;
+  .service-card p:not(.service-tagline) {
+    @apply mt-2.5 flex-1 text-sm leading-relaxed text-muted;
   }
 
   .service-whatsapp {
-    @apply inline-flex min-h-12 w-full items-center justify-center gap-3 rounded-full border border-coexistir-700 bg-coexistir-700 px-6 text-xs font-bold uppercase tracking-wider text-white shadow-card transition hover:-translate-y-0.5 hover:bg-coexistir-500 hover:shadow-soft;
+    @apply mt-6 inline-flex min-h-11 w-full items-center justify-center gap-3 rounded-full border-2 border-navy-900 bg-navy-900 px-6 text-xs font-bold uppercase tracking-wider text-white transition hover:border-navy-700 hover:bg-navy-700;
   }
 
   /* ==========================================================================
-     PIE DE PÁGINA (SITE FOOTER)
+     PIE DE PÁGINA (SITE FOOTER) - FLAT DESIGN
      ========================================================================== */
   .site-footer {
-    @apply border-t border-white/10 bg-coexistir-900 py-16 text-white;
+    @apply border-t border-navy-900 bg-navy-900 py-12 sm:py-14 text-white;
   }
 
   .footer-inner {
@@ -453,11 +435,11 @@
   }
 
   .footer-brand small {
-    @apply mt-1 text-xs font-semibold uppercase tracking-wider text-coexistir-active;
+    @apply mt-1 text-xs font-semibold uppercase tracking-wider text-gold;
   }
 
   .footer-top > p {
-    @apply max-w-md text-sm leading-relaxed text-white/75;
+    @apply max-w-md text-sm leading-relaxed text-white/80;
   }
 
   .footer-nav {
@@ -473,18 +455,18 @@
   }
 
   .footer-wa-channel {
-    @apply inline-flex items-center gap-2 rounded-full border border-coexistir-active/50 bg-white/10 px-5 py-2.5 text-xs font-bold text-white shadow-xs transition hover:bg-coexistir-active hover:text-coexistir-900;
+    @apply inline-flex items-center gap-2 rounded-full border border-whatsapp bg-whatsapp px-5 py-2.5 text-xs font-bold text-white transition hover:bg-whatsapp-hover;
   }
 
   /* ==========================================================================
-     BOTÓN FLOTANTE Y PANEL DE WHATSAPP
+     BOTÓN FLOTANTE Y PANEL DE WHATSAPP - FLAT DESIGN
      ========================================================================== */
   .floating-contact {
-    @apply fixed bottom-6 right-6 z-50 grid size-14 place-items-center rounded-full border border-coexistir-active bg-gradient-to-br from-[#e6c96b] via-[#d4af37] to-[#8a6b1f] text-coexistir-900 shadow-soft transition duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-card sm:bottom-8 sm:right-8;
+    @apply fixed bottom-6 right-6 z-50 grid size-14 place-items-center rounded-full border-2 border-white bg-whatsapp text-white transition hover:bg-whatsapp-hover sm:bottom-8 sm:right-8;
   }
 
   .whatsapp-glyph {
-    @apply grid size-7 place-items-center drop-shadow-xs;
+    @apply grid size-7 place-items-center;
   }
 
   .whatsapp-glyph svg {
@@ -492,19 +474,19 @@
   }
 
   .whatsapp-question-panel {
-    @apply fixed bottom-24 right-4 z-50 max-h-[calc(100vh-7.5rem)] w-[min(42rem,calc(100vw-2rem))] overflow-y-auto rounded-[2rem] border border-coexistir-900/20 bg-white/95 shadow-soft backdrop-blur-2xl sm:right-8;
+    @apply fixed bottom-24 right-4 z-50 max-h-[calc(100vh-7.5rem)] w-[min(42rem,calc(100vw-2rem))] overflow-y-auto rounded-2xl border border-line bg-white sm:right-8;
   }
 
   .whatsapp-panel-close {
-    @apply absolute right-4 top-4 z-30 grid size-8 cursor-pointer place-items-center rounded-full border-0 bg-white/20 text-xl font-bold leading-none text-white backdrop-blur-md transition hover:bg-white/30;
+    @apply absolute right-4 top-4 z-30 grid size-8 cursor-pointer place-items-center rounded-full border-0 bg-white/20 text-xl font-bold leading-none text-white transition hover:bg-white/30;
   }
 
   .whatsapp-panel-header {
-    @apply relative z-20 flex items-center gap-3 border-b border-white/10 bg-coexistir-900 px-6 py-5 text-white;
+    @apply relative z-20 flex items-center gap-3 border-b border-navy-700 bg-navy-900 px-6 py-5 text-white;
   }
 
   .whatsapp-panel-mark {
-    @apply grid size-10 place-items-center rounded-xl bg-coexistir-active p-2 text-coexistir-900 shadow-xs;
+    @apply grid size-10 place-items-center rounded-xl bg-whatsapp p-2 text-white;
   }
 
   .whatsapp-panel-mark svg {
@@ -516,15 +498,27 @@
   }
 
   .whatsapp-panel-header span:not(.whatsapp-panel-mark) {
-    @apply mt-0.5 block text-xs text-coexistir-active;
+    @apply mt-0.5 block text-xs text-gold;
   }
 
   .whatsapp-panel-body {
     @apply p-6 sm:p-8;
   }
 
+  .whatsapp-panel-visual {
+    @apply m-0 mb-5 hidden overflow-hidden rounded-xl border border-line bg-bg-base p-3 text-center sm:block;
+  }
+
+  .whatsapp-panel-visual img {
+    @apply mx-auto max-h-36 w-auto object-contain;
+  }
+
+  .whatsapp-panel-visual figcaption {
+    @apply mt-1 text-[0.7rem] font-semibold text-muted;
+  }
+
   .whatsapp-question-panel h2 {
-    @apply m-0 font-display text-2xl font-normal leading-tight text-coexistir-900;
+    @apply m-0 font-display text-2xl font-normal leading-tight text-navy-900;
   }
 
   .whatsapp-panel-description {
@@ -536,23 +530,23 @@
   }
 
   .whatsapp-question-list a {
-    @apply flex min-h-12 items-center justify-between gap-4 rounded-xl border border-coexistir-900/10 bg-sage-100/60 px-4 py-3 text-xs font-semibold text-coexistir-900 shadow-xs transition hover:translate-x-1 hover:border-coexistir-active hover:bg-white;
+    @apply flex min-h-12 items-center justify-between gap-4 rounded-xl border border-line bg-bg-base px-4 py-3 text-xs font-semibold text-navy-900 transition hover:border-navy-900 hover:bg-white;
   }
 
   .whatsapp-question-list i {
-    @apply text-base font-bold not-italic text-coexistir-active;
+    @apply text-base font-bold not-italic text-gold;
   }
 
   .whatsapp-custom-message {
-    @apply mt-6 rounded-2xl border border-coexistir-900/10 bg-sage-100/40 p-4;
+    @apply mt-6 rounded-xl border border-line bg-bg-base p-4;
   }
 
   .whatsapp-custom-message > label {
-    @apply mb-2 block text-xs font-bold text-coexistir-900;
+    @apply mb-2 block text-xs font-bold text-navy-900;
   }
 
   .whatsapp-custom-message textarea {
-    @apply block min-h-20 w-full resize-none rounded-xl border border-line bg-white px-3 py-2.5 text-xs text-ink outline-none transition placeholder:text-muted/60 focus:border-coexistir-700 focus:ring-4 focus:ring-coexistir-700/10;
+    @apply block min-h-20 w-full resize-none rounded-lg border border-slate-300 bg-white px-3 py-2.5 text-xs text-ink outline-none transition placeholder:text-muted/60 focus:border-navy-900 focus:ring-2 focus:ring-navy-900/10;
   }
 
   .whatsapp-message-actions {
@@ -564,6 +558,6 @@
   }
 
   .whatsapp-message-actions button {
-    @apply inline-flex min-h-10 cursor-pointer items-center justify-center gap-2 rounded-full border-0 bg-coexistir-700 px-5 text-xs font-bold text-white transition hover:bg-coexistir-500 disabled:opacity-40;
+    @apply inline-flex min-h-10 cursor-pointer items-center justify-center gap-2 rounded-full border-0 bg-navy-900 px-5 text-xs font-bold text-white transition hover:bg-navy-700 disabled:opacity-40;
   }
 }

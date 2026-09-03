@@ -22,13 +22,13 @@
       "title": "Sesión de AstroKab",
       "tagline": "Descodifica tu pasado, programa tu futuro",
       "badge": "Mapa Astral + Kabbalah",
-      "description": "Con tu hora y fecha de nacimiento, aprenderás a conocerte mejor y a tomar mejores decisiones en tu vida. Tú tienes un propósito en esta vida. No lo dudes.",
+      "description": "Con tu hora y fecha de nacimiento, aprenderás a conocerte mejor y a tomar mejores decisiones en tu vida. Y a no repetir patrones que no te corresponden. Tú eres un ser de luz y tienes un propósito en esta vida. No lo dudes.",
       "price": "S/ 700",
       "priceNote": "Sesión individual",
       "priceUnit": "por sesión",
       "image": "service-2.svg",
       "imageAlt": "Sesión de AstroKab: Mapa Astral y Kabbalah",
-      "visualVariant": "capsule"
+      "visualVariant": "circular"
     }
   ]
 }

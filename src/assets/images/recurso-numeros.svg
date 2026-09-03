@@ -6,15 +6,15 @@
       <stop offset="1" stop-color="#9a7b1f"/>
     </linearGradient>
   </defs>
-  <rect width="600" height="620" fill="#f6f1e5"/>
-  <circle cx="300" cy="310" r="210" fill="none" stroke="#d4af37" stroke-opacity="0.25" stroke-width="1.5"/>
-  <circle cx="300" cy="310" r="160" fill="none" stroke="#d4af37" stroke-opacity="0.15" stroke-width="1"/>
-  <g font-family="Georgia, serif" fill="#1b1a17">
+  <rect width="600" height="620" fill="#ffffff"/>
+  <circle cx="300" cy="310" r="210" fill="none" stroke="#d4af37" stroke-opacity="0.85" stroke-width="3.5"/>
+  <circle cx="300" cy="310" r="160" fill="none" stroke="#d4af37" stroke-opacity="0.75" stroke-width="3"/>
+  <g font-family="'DM Serif Display', Georgia, serif" fill="#0b1b3d">
     <text x="300" y="150" text-anchor="middle" font-size="46">1</text>
     <text x="300" y="372" text-anchor="middle" font-size="46">9</text>
     <text x="150" y="330" text-anchor="middle" font-size="46">5</text>
     <text x="450" y="330" text-anchor="middle" font-size="46">5</text>
   </g>
-  <circle cx="300" cy="310" r="90" fill="#faf9f6" stroke="url(#gold)" stroke-width="2"/>
+  <circle cx="300" cy="310" r="90" fill="#f4f6f9" stroke="#d4af37" stroke-width="3.5"/>
   <path d="M300 268 L318 300 L366 306 L318 312 L300 344 L282 312 L234 306 L282 300 Z" fill="#d4af37"/>
 </svg>

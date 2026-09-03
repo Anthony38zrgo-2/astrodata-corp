@@ -3,64 +3,73 @@
   --font-display: "DM Serif Display", Georgia, serif;
 
   --color-white: #ffffff;
-  /* Tonos Vino y Borgoña de Alta Jerarquía */
-  --color-coexistir-900: #4a0e1c;
-  --color-coexistir-700: #6e1a2c;
-  --color-coexistir-500: #8f253b;
-  /* Oro Radiante Actual (Símbolos, Acentos y Luz) */
-  --color-coexistir-active: #d4af37;
-  /* Derivados Suaves (Ceniza de Vino y Porcelana Cálida) */
-  --color-sage-400: #ebd8dc;
-  --color-sage-100: #f7eff1;
-  --color-icon-muted: #a88c94;
-  --color-soft-white: #faf7f7;
-  --color-ink: #1b1a17;
-  --color-muted: #6a6466;
-  --color-line: #ebdce0;
+  /* Familia Dominante Azul Marino (Navy) */
+  --color-navy-900: #0b1b3d;
+  --color-navy-700: #162b55;
+  --color-navy-500: #23427d;
 
-  --shadow-soft: 0 24px 60px -32px rgb(74 14 28 / 0.25);
-  --shadow-card: 0 18px 40px -28px rgb(74 14 28 / 0.14);
+  /* Oro Solar Sólido */
+  --color-gold: #d4af37;
+  --color-gold-hover: #b89327;
+
+  /* Verde WhatsApp Sólido */
+  --color-whatsapp: #25d366;
+  --color-whatsapp-hover: #1eb857;
+
+  /* Neutros Planos de Alto Contraste (Sin Tonos Pastel) */
+  --color-bg-base: #f4f6f9;
+  --color-surface-card: #ffffff;
+  --color-ink: #0f172a;
+  --color-muted: #475569;
+  --color-line: #e2e8f0;
+  --color-line-dark: #cbd5e1;
+
+  /* Aliases para compatibilidad */
+  --color-coexistir-900: #0b1b3d;
+  --color-coexistir-700: #162b55;
+  --color-coexistir-500: #23427d;
+  --color-coexistir-active: #d4af37;
+  --color-sage-400: #e2e8f0;
+  --color-sage-100: #ffffff;
+  --color-icon-muted: #64748b;
+  --color-soft-white: #f4f6f9;
+
+  /* Flat Design: sombras difusas eliminadas */
+  --shadow-soft: 0 1px 3px 0 rgb(15 23 42 / 0.08);
+  --shadow-card: 0 1px 2px 0 rgb(15 23 42 / 0.06);
+  --shadow-flat: 0 2px 0 0 rgb(11 27 61 / 0.08);
 }
 
 :root {
-  --palette-sage: #6e1a2c;
-  --palette-mist: #8f253b;
-  --palette-warm-white: #faf7f7;
-  --palette-light-gray: #f7eff1;
-  --palette-dark-olive: #4a0e1c;
+  --palette-primary: #0b1b3d;
+  --palette-secondary: #162b55;
+  --palette-accent: #d4af37;
+  --palette-background: #f4f6f9;
+  --palette-surface: #ffffff;
+  --palette-border: #e2e8f0;
 
-  --color-background: var(--palette-warm-white);
-  --color-surface: var(--palette-light-gray);
-  --color-primary: var(--palette-dark-olive);
-  --color-secondary: var(--palette-sage);
-  --color-accent: var(--palette-mist);
+  --color-background: var(--palette-background);
+  --color-surface: var(--palette-surface);
+  --color-primary: var(--palette-primary);
+  --color-secondary: var(--palette-secondary);
+  --color-accent: var(--palette-accent);
 
-  --color-text: #1b1a17;
-  --color-text-secondary: #6a6466;
+  --color-text: #0f172a;
+  --color-text-secondary: #475569;
   --color-text-inverse: #ffffff;
-  --color-text-accent: #6e1a2c;
+  --color-text-accent: #162b55;
 
-  --color-border: rgb(74 14 28 / 0.12);
-  --color-highlight: rgb(212 175 55 / 0.12);
-  --color-shadow: rgb(74 14 28 / 0.18);
+  --color-border: #e2e8f0;
+  --color-highlight: #d4af37;
+  --color-shadow: rgb(11 27 61 / 0.08);
 
-  --aero-glass-sage: rgb(110 26 44 / 0.16);
-  --aero-glass-mist: rgb(143 37 59 / 0.14);
-  --aero-glass-light: rgb(255 255 255 / 0.7);
-  --aero-border-light: rgb(0 0 0 / 0.08);
-  --aero-border-dark: rgb(110 26 44 / 0.4);
-  --aero-shadow: rgb(74 14 28 / 0.2);
-
-  --coexistir-green-900: #4a0e1c;
-  --coexistir-green-700: #6e1a2c;
-  --coexistir-green-500: #8f253b;
-  --coexistir-green-active: #d4af37;
-  --coexistir-sage-400: #ebd8dc;
-  --coexistir-sage-100: #f7eff1;
-  --coexistir-icon-muted: #a88c94;
+  --coexistir-navy-900: #0b1b3d;
+  --coexistir-navy-700: #162b55;
+  --coexistir-navy-500: #23427d;
+  --coexistir-gold: #d4af37;
   --coexistir-white: #ffffff;
-  --coexistir-off-white: #faf7f7;
-  --coexistir-text: #1b1a17;
-  --coexistir-text-muted: #6a6466;
-  --coexistir-border: #ebdce0;
+  --coexistir-background: #f4f6f9;
+  --coexistir-text: #0f172a;
+  --coexistir-text-muted: #475569;
+  --coexistir-border: #e2e8f0;
 }
