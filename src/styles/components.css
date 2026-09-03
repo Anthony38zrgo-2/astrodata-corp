@@ -1,4 +1,4 @@
-﻿@layer base {
+@layer base {
   * {
     @apply box-border;
   }
@@ -9,11 +9,13 @@
 
   body {
     @apply m-0 min-w-80 bg-soft-white font-sans text-ink antialiased;
+    background-color: var(--palette-warm-white);
   }
 
   body,
   button,
-  input {
+  input,
+  textarea {
     font: inherit;
   }
 
@@ -35,7 +37,7 @@
   }
 
   ::selection {
-    @apply bg-sage-400 text-coexistir-900;
+    @apply bg-coexistir-active/20 text-coexistir-900;
   }
 
   section {
@@ -44,13 +46,18 @@
 }
 
 @layer components {
+  /* Layout Base */
   .page-shell,
   #app {
     @apply min-h-screen;
+    background:
+      radial-gradient(circle at 10% 0%, rgb(212 175 55 / 0.08), transparent 32rem),
+      radial-gradient(circle at 90% 20%, rgb(110 26 44 / 0.04), transparent 28rem),
+      var(--palette-warm-white);
   }
 
   .site-main {
-    @apply overflow-hidden;
+    @apply relative overflow-hidden;
   }
 
   .section-container {
@@ -58,39 +65,54 @@
   }
 
   .section-kicker {
-    @apply mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-coexistir-500;
+    @apply mb-4 inline-flex items-center gap-2 rounded-full border border-coexistir-active/40 bg-white/80 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-coexistir-700 shadow-xs backdrop-blur-md;
   }
 
+  .section-heading {
+    @apply mb-12 flex flex-col justify-between gap-5 border-b border-line pb-8 md:flex-row md:items-end;
+  }
+
+  .section-heading h2 {
+    @apply font-display text-4xl font-normal tracking-[-0.025em] text-coexistir-900 sm:text-5xl;
+  }
+
+  .section-heading p:last-child {
+    @apply max-w-md text-sm leading-relaxed text-muted;
+  }
+
+  /* ==========================================================================
+     CABECERA (SITE HEADER)
+     ========================================================================== */
   .site-header {
-    @apply sticky top-0 z-50 border-b border-white/10 bg-coexistir-900/90 text-white shadow-card backdrop-blur-xl;
+    @apply sticky top-0 z-50 border-b border-white/15 bg-coexistir-900/95 text-white shadow-soft backdrop-blur-2xl transition-all duration-300;
   }
 
   .header-inner {
-    @apply relative mx-auto flex h-20 w-full max-w-7xl items-center gap-6 px-5 sm:px-8 lg:px-10;
+    @apply relative mx-auto flex h-20 w-full max-w-7xl items-center justify-between px-5 sm:px-8 lg:px-10;
   }
 
   .brand-lockup {
-    @apply flex h-14 max-w-[13rem] shrink-0 items-center gap-3 overflow-hidden sm:max-w-[17rem];
+    @apply flex items-center gap-3.5 transition hover:opacity-90;
   }
 
   .brand-logo {
-    @apply size-11 max-h-11 max-w-11 shrink-0 rounded-xl object-cover;
+    @apply size-11 shrink-0 rounded-xl border border-white/20 bg-white/10 p-1 shadow-card;
   }
 
   .brand-copy {
-    @apply flex min-w-0 flex-col;
+    @apply flex flex-col leading-tight;
   }
 
   .brand-copy strong {
-    @apply truncate font-display text-xl font-normal leading-none text-white sm:text-2xl;
+    @apply font-display text-2xl font-normal tracking-tight text-white;
   }
 
   .brand-copy small {
-    @apply mt-1 hidden truncate text-[0.52rem] font-semibold uppercase tracking-[0.16em] text-icon-muted sm:block;
+    @apply text-[0.68rem] font-medium tracking-wider text-coexistir-active;
   }
 
   .side-nav {
-    @apply fixed inset-x-4 top-20 hidden flex-col gap-1 rounded-2xl border border-white/10 bg-coexistir-900/95 p-3 shadow-soft backdrop-blur-xl lg:static lg:ml-auto lg:flex lg:flex-row lg:items-center lg:border-0 lg:bg-transparent lg:p-0 lg:shadow-none;
+    @apply fixed inset-x-4 top-24 hidden flex-col gap-1 rounded-2xl border border-white/15 bg-coexistir-900/98 p-4 shadow-soft backdrop-blur-2xl lg:static lg:flex lg:flex-row lg:items-center lg:gap-1.5 lg:border-0 lg:bg-transparent lg:p-0 lg:shadow-none;
   }
 
   .site-header.is-open .side-nav {
@@ -98,23 +120,29 @@
   }
 
   .side-nav a {
-    @apply relative flex min-h-11 items-center bg-transparent px-4 text-sm font-medium text-white/80 transition duration-300 after:absolute after:bottom-1 after:left-4 after:right-4 after:h-px after:origin-left after:scale-x-0 after:bg-white after:content-[''] hover:-translate-y-0.5 hover:bg-transparent hover:text-white hover:after:scale-x-100;
+    @apply rounded-full px-4 py-2 text-sm font-semibold text-white/85 transition hover:bg-white/10 hover:text-coexistir-active;
   }
 
   .header-cta {
-    @apply ml-auto hidden min-h-11 items-center justify-center rounded-full bg-white px-5 text-sm font-semibold text-coexistir-900 shadow-card transition hover:-translate-y-0.5 hover:bg-sage-100 md:inline-flex lg:ml-2;
+    @apply hidden min-h-11 items-center justify-center rounded-full border border-coexistir-active/50 bg-gradient-to-r from-coexistir-active to-[#b89327] px-5 text-xs font-bold uppercase tracking-wider text-coexistir-900 shadow-card transition hover:-translate-y-0.5 hover:shadow-soft hover:brightness-105 md:inline-flex;
   }
 
   .menu-toggle {
-    @apply ml-auto grid size-11 place-content-center gap-1.5 rounded-full border border-white/20 bg-white/10 lg:hidden;
+    @apply flex size-11 flex-col items-center justify-center gap-1.5 rounded-xl border border-white/20 bg-white/10 p-2 text-white transition hover:bg-white/20 lg:hidden;
   }
 
   .menu-toggle span {
-    @apply h-0.5 w-5 rounded-full bg-white transition;
+    @apply h-0.5 w-6 rounded-full bg-white transition;
   }
 
+  /* ==========================================================================
+     HERO SECTION
+     ========================================================================== */
   .hero {
-    @apply bg-soft-white py-12 sm:py-16 lg:py-20;
+    @apply relative overflow-hidden py-16 sm:py-20 lg:py-24;
+    background:
+      radial-gradient(circle at 85% 15%, rgb(212 175 55 / 0.12), transparent 28rem),
+      radial-gradient(circle at 15% 75%, rgb(110 26 44 / 0.06), transparent 24rem);
   }
 
   .hero-inner {
@@ -122,536 +150,290 @@
   }
 
   .hero-content {
-    @apply lg:col-span-6;
+    @apply lg:col-span-7;
   }
 
-  .hero-eyebrow {
-    @apply mb-6 flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.22em] text-coexistir-500;
-  }
-
-  .hero-eyebrow > span {
-    @apply h-2 w-2 rounded-full bg-coexistir-active ring-4 ring-coexistir-active/20;
+  .hero-kicker {
+    @apply mb-5 inline-flex items-center gap-2 rounded-full border border-coexistir-active/40 bg-coexistir-active/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-coexistir-900 shadow-xs;
   }
 
   .hero-content h1 {
-    @apply max-w-[12ch] font-display text-5xl leading-[0.98] tracking-[-0.035em] text-coexistir-900 sm:text-6xl lg:text-7xl;
+    @apply max-w-xl font-display text-4xl font-normal leading-[1.08] tracking-[-0.03em] text-coexistir-900 sm:text-5xl lg:text-6xl;
   }
 
   .hero-description {
-    @apply mt-6 max-w-xl text-base leading-8 text-muted sm:text-lg;
+    @apply mt-6 max-w-xl text-base leading-relaxed text-muted sm:text-lg;
   }
 
   .hero-actions {
-    @apply mt-8 flex flex-col gap-3 sm:flex-row;
-  }
-
-  .button-primary,
-  .button-secondary {
-    @apply inline-flex min-h-13 items-center justify-center gap-3 rounded-full px-6 text-sm font-semibold transition;
+    @apply mt-8 flex flex-col gap-3 sm:flex-row sm:items-center;
   }
 
   .button-primary {
-    @apply bg-coexistir-900 text-white shadow-soft hover:-translate-y-0.5 hover:bg-coexistir-700;
+    @apply inline-flex min-h-13 items-center justify-center gap-3 rounded-full border border-coexistir-700 bg-coexistir-700 px-7 text-sm font-bold text-white shadow-soft transition hover:-translate-y-0.5 hover:bg-coexistir-500 hover:shadow-card;
   }
 
   .button-secondary {
-    @apply border border-coexistir-900/20 bg-white text-coexistir-900 hover:border-coexistir-500 hover:bg-sage-100;
+    @apply inline-flex min-h-13 items-center justify-center gap-3 rounded-full border border-coexistir-900/20 bg-white px-7 text-sm font-semibold text-coexistir-900 shadow-xs transition hover:-translate-y-0.5 hover:border-coexistir-700 hover:bg-sage-100;
   }
 
   .hero-highlights {
-    @apply mt-9 grid list-none gap-3 p-0 text-sm text-coexistir-700 sm:grid-cols-3;
+    @apply mt-10 grid list-none gap-3 p-0 sm:grid-cols-3;
   }
 
   .hero-highlights li {
-    @apply flex items-start gap-2 leading-5;
+    @apply flex items-center gap-2.5 rounded-xl border border-coexistir-active/20 bg-white/80 px-3.5 py-2.5 text-xs font-semibold text-coexistir-900 shadow-xs backdrop-blur-xs;
   }
 
   .hero-highlights li > span {
-    @apply mt-0.5 grid size-5 shrink-0 place-items-center rounded-full bg-sage-100 text-[0.65rem] font-bold text-coexistir-900;
+    @apply grid size-5 place-items-center rounded-full bg-coexistir-active/20 text-xs font-bold text-coexistir-700;
   }
 
   .hero-image-wrap {
-    @apply relative m-0 min-h-[30rem] overflow-hidden rounded-[2rem] bg-sage-100 shadow-soft sm:min-h-[38rem] lg:col-span-6;
-  }
-
-  .hero-image-wrap::before {
-    @apply pointer-events-none absolute inset-0 z-10 bg-gradient-to-t from-coexistir-900/25 via-transparent to-transparent content-[''];
+    @apply relative m-0 overflow-hidden rounded-[2.25rem] border border-coexistir-900/10 bg-white p-3 shadow-soft transition duration-500 hover:shadow-card lg:col-span-5;
   }
 
   .hero-image-wrap img {
-    @apply absolute inset-0 h-full w-full object-cover object-center;
+    @apply h-auto w-full rounded-[1.75rem] object-cover transition duration-700 hover:scale-102;
   }
 
   .hero-image-wrap figcaption {
-    @apply absolute bottom-5 left-5 z-20 flex items-center gap-2 rounded-full border border-white/30 bg-white/90 px-4 py-2.5 text-xs font-semibold text-coexistir-900 shadow-card backdrop-blur;
-  }
-
-  .hero-stats {
-    @apply mx-auto grid w-full max-w-7xl grid-cols-3 gap-4 px-5 pb-4 sm:px-8 lg:px-10;
-  }
-
-  .hero-stat {
-    @apply flex flex-col gap-1 rounded-2xl border border-coexistir-900/10 bg-white/70 px-4 py-4 text-center backdrop-blur;
-  }
-
-  .hero-stat strong {
-    @apply font-display text-2xl font-normal text-coexistir-900 sm:text-3xl;
-  }
-
-  .hero-stat span {
-    @apply text-[0.7rem] font-semibold uppercase tracking-[0.12em] text-muted;
+    @apply absolute bottom-6 left-6 right-6 flex items-center justify-center gap-2.5 rounded-2xl border border-white/60 bg-white/95 px-4 py-3 text-center text-xs font-bold text-coexistir-900 shadow-card backdrop-blur-md;
   }
 
   .status-dot {
-    @apply size-2 rounded-full bg-coexistir-active ring-4 ring-coexistir-active/20;
+    @apply size-2.5 rounded-full bg-coexistir-active ring-4 ring-coexistir-active/20;
   }
 
+  .hero-stats {
+    @apply mx-auto mt-14 grid w-full max-w-7xl grid-cols-1 gap-4 px-5 sm:grid-cols-3 sm:px-8 lg:px-10;
+  }
+
+  .hero-stat {
+    @apply flex flex-col items-center rounded-2xl border border-coexistir-900/10 bg-white/80 p-5 text-center shadow-xs backdrop-blur-xs transition hover:border-coexistir-active/40;
+  }
+
+  .hero-stat strong {
+    @apply font-display text-3xl font-semibold text-coexistir-900 sm:text-4xl;
+  }
+
+  .hero-stat span {
+    @apply mt-1 text-xs font-semibold uppercase tracking-wider text-muted;
+  }
+
+  /* ==========================================================================
+     FILOSOFÍA, LEMA Y DESGLOSE CUÁNTICO
+     ========================================================================== */
   .about-section {
     @apply bg-white py-20 sm:py-24 lg:py-32;
   }
 
-  .philosophy-block,
-  .founder-block {
-    @apply grid overflow-hidden rounded-[2rem] border border-coexistir-900/10 lg:grid-cols-2;
-  }
-
   .philosophy-block {
-    @apply bg-sage-100;
+    @apply grid overflow-hidden rounded-[2.25rem] border border-coexistir-900/10 bg-sage-100 shadow-card lg:grid-cols-12;
   }
 
-  .copy-panel,
-  .founder-copy,
-  .virtual-copy {
-    @apply flex flex-col justify-center p-7 sm:p-10 lg:p-14;
+  .copy-panel {
+    @apply flex flex-col justify-center p-7 sm:p-10 lg:col-span-7 lg:p-14;
   }
 
-  .copy-panel h2,
-  .founder-copy h2,
-  .virtual-copy h2,
-  .section-heading h2,
-  .resource-heading h2,
-  .contact-intro h2 {
-    @apply font-display font-normal tracking-[-0.025em] text-coexistir-900;
-  }
-
-  .copy-panel h2,
-  .founder-copy h2,
-  .virtual-copy h2,
-  .contact-intro h2 {
-    @apply text-4xl leading-[1.05] sm:text-5xl lg:text-6xl;
+  .copy-panel h2 {
+    @apply font-display text-3xl font-normal leading-tight tracking-tight text-coexistir-900 sm:text-4xl lg:text-5xl;
   }
 
   .prose-copy {
-    @apply mt-6 space-y-4 text-base leading-8 text-muted;
+    @apply mt-6 space-y-4 text-base leading-relaxed text-muted;
   }
 
-  .care-note {
-    @apply mt-8 flex w-fit items-center gap-3 rounded-full bg-white/70 px-4 py-2 text-xs font-semibold text-coexistir-700;
+  .motto-banner {
+    @apply mt-8 flex w-fit items-center gap-2 rounded-full border border-coexistir-active/50 bg-white px-5 py-2 text-xs font-bold tracking-wide text-coexistir-900 shadow-xs;
   }
 
-  .care-note > span {
-    @apply text-coexistir-active;
+  .motto-star {
+    @apply text-base text-coexistir-active;
+  }
+
+  .birth-breakdown-panel {
+    @apply mt-8 rounded-2xl border border-coexistir-900/10 bg-white/85 p-5 shadow-xs;
+  }
+
+  .breakdown-subtitle {
+    @apply mb-4 text-xs font-bold uppercase tracking-wider text-coexistir-700;
+  }
+
+  .breakdown-grid {
+    @apply grid grid-cols-1 gap-3 sm:grid-cols-3;
+  }
+
+  .breakdown-item {
+    @apply flex flex-col items-center rounded-xl border border-coexistir-active/30 bg-white p-4 text-center transition duration-300 hover:border-coexistir-active hover:shadow-xs;
+  }
+
+  .breakdown-unit {
+    @apply text-[0.65rem] font-bold uppercase tracking-widest text-muted;
+  }
+
+  .breakdown-val {
+    @apply my-1 font-display text-3xl font-bold text-coexistir-900;
+  }
+
+  .breakdown-title {
+    @apply text-xs font-semibold text-ink leading-tight;
+  }
+
+  .breakdown-detail {
+    @apply mt-1 text-[0.7rem] leading-tight text-muted;
   }
 
   .calm-visual {
-    @apply relative m-0 min-h-[26rem] overflow-hidden bg-sage-400 lg:min-h-[38rem];
+    @apply relative m-0 flex min-h-[22rem] items-center justify-center overflow-hidden bg-sage-400 p-6 lg:col-span-5 lg:min-h-full;
   }
 
   .calm-visual img {
-    @apply absolute inset-0 h-full w-full object-cover;
+    @apply h-auto max-h-[28rem] w-full max-w-sm rounded-2xl object-contain drop-shadow-md;
   }
 
+  /* ==========================================================================
+     SOBRE TU GUÍA (MARY MARÍN)
+     ========================================================================== */
   .founder-block {
-    @apply mt-8 bg-white shadow-card lg:mt-12;
+    @apply mt-12 grid overflow-hidden rounded-[2.25rem] border border-coexistir-900/10 bg-white shadow-card lg:grid-cols-12;
   }
 
   .founder-portrait {
-    @apply relative m-0 min-h-[32rem] overflow-hidden bg-sage-100 lg:min-h-[42rem];
+    @apply relative m-0 flex min-h-[22rem] items-center justify-center overflow-hidden bg-sage-100 p-6 lg:col-span-5 lg:min-h-full;
   }
 
   .founder-portrait img {
-    @apply absolute inset-0 h-full w-full object-cover object-[center_28%];
+    @apply h-auto max-h-[28rem] w-full max-w-sm rounded-2xl object-contain drop-shadow-md;
+  }
+
+  .founder-copy {
+    @apply flex flex-col justify-center p-7 sm:p-10 lg:col-span-7 lg:p-14;
+  }
+
+  .founder-copy h2 {
+    @apply font-display text-3xl font-normal leading-tight text-coexistir-900 sm:text-4xl;
   }
 
   .founder-copy h3 {
-    @apply mt-6 font-display text-2xl font-normal text-coexistir-500;
+    @apply mt-4 font-display text-2xl font-normal text-coexistir-700;
+  }
+
+  .founder-role {
+    @apply mt-1.5 text-xs font-bold uppercase tracking-wider text-coexistir-active;
   }
 
   .founder-prose {
-    @apply text-[0.95rem] leading-7;
+    @apply mt-6 space-y-4 text-base leading-relaxed text-muted;
   }
 
+  /* ==========================================================================
+     BLOQUE CITA PREVIA / VIRTUAL CARE
+     ========================================================================== */
   .virtual-block {
-    @apply mt-8 grid overflow-hidden rounded-[2rem] bg-coexistir-900 text-white shadow-soft lg:mt-12 lg:grid-cols-[0.85fr_1.15fr];
+    @apply mt-12 grid overflow-hidden rounded-[2.25rem] border border-coexistir-900/20 bg-gradient-to-br from-coexistir-900 via-coexistir-900 to-[#3b0914] text-white shadow-soft lg:grid-cols-12;
   }
 
   .calm-visual-dark {
-    @apply min-h-[24rem] lg:min-h-[32rem];
+    @apply relative m-0 flex min-h-[18rem] items-center justify-center overflow-hidden p-6 lg:col-span-5 lg:min-h-full;
   }
 
-  .calm-visual-dark::after {
-    @apply absolute inset-0 bg-coexistir-900/30 content-[''];
+  .calm-visual-dark img {
+    @apply h-auto max-h-[20rem] w-full max-w-xs rounded-2xl object-contain brightness-95 filter;
+  }
+
+  .virtual-copy {
+    @apply flex flex-col justify-center p-7 sm:p-10 lg:col-span-7 lg:p-14;
   }
 
   .virtual-copy .section-kicker {
-    @apply text-coexistir-900;
+    @apply border-white/20 bg-white/10 text-coexistir-active;
   }
 
   .virtual-copy h2 {
-    @apply text-white;
+    @apply font-display text-3xl font-normal text-white sm:text-4xl;
   }
 
-  .virtual-copy > p:not(.section-kicker) {
-    @apply mt-6 max-w-2xl text-base leading-8 text-sage-100;
+  .virtual-copy p {
+    @apply mt-4 text-base leading-relaxed text-white/80;
   }
 
   .text-link {
-    @apply mt-8 inline-flex w-fit min-h-11 items-center gap-3 border-b border-sage-400 pb-1 text-sm font-semibold text-white transition hover:gap-5;
+    @apply mt-8 inline-flex w-fit items-center gap-3 rounded-full border border-coexistir-active bg-gradient-to-r from-coexistir-active to-[#b89327] px-6 py-3 text-xs font-bold uppercase tracking-wider text-coexistir-900 shadow-card transition hover:-translate-y-0.5 hover:shadow-soft hover:brightness-105;
   }
 
+  /* ==========================================================================
+     SERVICIOS (SESIÓN DE NUMEROLOGÍA & ASTROKAB)
+     ========================================================================== */
   .services-section {
-    @apply bg-sage-100 py-20 sm:py-24 lg:py-32;
-  }
-
-  .section-heading {
-    @apply mb-10 grid items-end gap-6 lg:mb-14 lg:grid-cols-[1fr_0.6fr];
-  }
-
-  .section-heading h2,
-  .resource-heading h2 {
-    @apply max-w-[12ch] text-4xl leading-[1.02] sm:text-5xl lg:text-6xl;
-  }
-
-  .section-heading > p {
-    @apply max-w-lg text-base leading-7 text-coexistir-700;
+    @apply bg-soft-white py-20 sm:py-24 lg:py-32;
   }
 
   .services-grid {
-    @apply grid gap-5 md:grid-cols-2 lg:grid-cols-3;
+    @apply grid gap-8 lg:grid-cols-2;
   }
 
   .service-card {
-    @apply flex min-w-0 flex-col overflow-hidden rounded-[1.75rem] border border-coexistir-900/10 bg-white shadow-card transition duration-300 hover:-translate-y-1 hover:shadow-soft;
+    @apply relative flex flex-col overflow-hidden rounded-[2.25rem] border border-coexistir-900/10 bg-white shadow-card transition duration-500 hover:-translate-y-1 hover:border-coexistir-active/50 hover:shadow-soft;
   }
 
   .service-visual {
-    @apply relative m-0 h-60 overflow-hidden bg-sage-400;
-  }
-
-  .service-rectangular .service-visual {
-    @apply rounded-none;
-  }
-
-  .service-capsule .service-visual {
-    @apply mx-6 mt-6 h-64 rounded-full;
+    @apply relative m-0 flex h-60 items-center justify-center overflow-hidden bg-sage-100 p-6;
   }
 
   .service-visual img {
-    @apply h-full w-full object-cover transition duration-500;
-  }
-
-  .service-terapia-individual .service-visual img {
-    object-position: center 35%;
-  }
-
-  .service-terapia-pareja .service-visual img {
-    object-position: center 45%;
-  }
-
-  .service-orientacion-vocacional .service-visual img {
-    object-position: center 40%;
-  }
-
-  .service-evaluacion-psicologica-integral .service-visual img,
-  .service-campanas-sociales .service-visual img {
-    object-position: center 30%;
-  }
-
-  .service-talleres-charlas .service-visual img {
-    object-position: center 42%;
-  }
-
-  .service-card:hover .service-visual img {
-    @apply scale-105;
+    @apply h-full w-auto object-contain transition duration-700 hover:scale-105;
   }
 
   .service-number {
-    @apply absolute right-4 top-4 grid size-10 place-items-center rounded-full border border-white/40 bg-white/90 font-display text-sm text-coexistir-900 shadow-card backdrop-blur;
+    @apply absolute right-5 top-5 grid size-10 place-items-center rounded-full border border-coexistir-active/30 bg-white font-display text-sm font-semibold text-coexistir-900 shadow-card;
   }
 
   .service-body {
-    @apply flex flex-1 flex-col p-6 sm:p-7;
+    @apply flex flex-1 flex-col p-7 sm:p-9;
+  }
+
+  .service-meta {
+    @apply mb-3 flex items-center;
+  }
+
+  .service-badge {
+    @apply rounded-full border border-coexistir-active/40 bg-coexistir-active/15 px-3.5 py-1 text-[0.7rem] font-bold uppercase tracking-wider text-coexistir-900;
+  }
+
+  .service-tagline {
+    @apply mb-2 text-xs font-bold text-coexistir-700;
   }
 
   .service-card h3 {
-    @apply font-display text-2xl font-normal leading-tight text-coexistir-900;
+    @apply font-display text-2xl font-normal leading-tight text-coexistir-900 sm:text-3xl;
   }
 
   .service-card p {
-    @apply mt-3 flex-1 text-sm leading-7 text-muted;
+    @apply mt-3 flex-1 text-sm leading-relaxed text-muted;
   }
 
   .service-price {
-    @apply mt-4 flex items-baseline gap-2;
+    @apply my-6 flex items-baseline gap-2 border-y border-line py-4;
   }
 
   .service-price .price {
-    @apply font-display text-3xl font-normal text-coexistir-900;
+    @apply font-display text-4xl font-normal text-coexistir-900;
   }
 
   .service-price .unit {
-    @apply text-xs font-semibold uppercase tracking-[0.14em] text-muted;
-  }
-
-  .calculator-section {
-    @apply bg-soft-white py-20 sm:py-24 lg:py-32;
-  }
-
-  .calculator-grid {
-    @apply grid gap-5 lg:grid-cols-2;
-  }
-
-  .calculator-card,
-  .calculator-result {
-    @apply min-w-0 rounded-[1.75rem] border border-coexistir-900/10 bg-white shadow-card;
-  }
-
-  .calculator-card {
-    @apply p-6 sm:p-8;
-  }
-
-  .calculator-fields {
-    @apply grid grid-cols-3 gap-3;
-  }
-
-  .calculator-fields label {
-    @apply flex flex-col gap-2;
-  }
-
-  .calculator-fields label > span {
-    @apply text-[0.65rem] font-semibold uppercase tracking-[0.16em] text-coexistir-700;
-  }
-
-  .calculator-fields input {
-    @apply h-14 w-full rounded-xl border border-line bg-soft-white px-3 text-center font-display text-2xl text-ink outline-none transition focus:border-coexistir-500 focus:ring-4 focus:ring-coexistir-500/10;
-  }
-
-  .calculator-example {
-    @apply mt-4 text-xs text-muted;
-  }
-
-  .calculator-submit {
-    @apply mt-6 inline-flex min-h-13 w-full cursor-pointer items-center justify-center rounded-full bg-coexistir-900 px-6 font-semibold text-white transition hover:-translate-y-0.5 hover:bg-coexistir-700 disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:translate-y-0;
-  }
-
-  .calculator-result {
-    @apply flex flex-col items-center justify-center gap-3 p-8 text-center;
-  }
-
-  .calculator-result.is-empty {
-    @apply bg-sage-100;
-  }
-
-  .result-placeholder {
-    @apply grid size-14 place-items-center rounded-full bg-white font-display text-2xl text-coexistir-900 shadow-card;
-  }
-
-  .result-placeholder.result-warning {
-    @apply text-red-500;
-  }
-
-  .result-label {
-    @apply text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-coexistir-700;
-  }
-
-  .result-number {
-    @apply font-display text-7xl font-normal leading-none text-coexistir-900;
-  }
-
-  .result-master {
-    @apply rounded-full bg-coexistir-900 px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.16em] text-white;
-  }
-
-  .result-date {
-    @apply text-xs font-semibold uppercase tracking-[0.12em] text-coexistir-700;
-  }
-
-  .result-meaning {
-    @apply max-w-md text-sm leading-7 text-muted;
-  }
-
-  .result-cta {
-    @apply mt-2 inline-flex min-h-11 w-fit items-center gap-3 rounded-full bg-coexistir-900 px-5 text-xs font-semibold text-white transition hover:-translate-y-0.5 hover:bg-coexistir-700;
-  }
-
-  .result-reset {
-    @apply mt-1 inline-flex min-h-10 w-fit cursor-pointer items-center justify-center rounded-full border border-coexistir-900/20 bg-white px-4 text-xs font-semibold text-coexistir-900 transition hover:border-coexistir-900 hover:bg-sage-100;
+    @apply text-xs font-semibold uppercase tracking-wider text-muted;
   }
 
   .service-whatsapp {
-    @apply mt-6 inline-flex min-h-11 w-fit items-center gap-3 rounded-full border border-coexistir-900/20 px-4 text-xs font-semibold text-coexistir-900 transition hover:border-coexistir-900 hover:bg-coexistir-900 hover:text-white;
+    @apply inline-flex min-h-12 w-full items-center justify-center gap-3 rounded-full border border-coexistir-700 bg-coexistir-700 px-6 text-xs font-bold uppercase tracking-wider text-white shadow-card transition hover:-translate-y-0.5 hover:bg-coexistir-500 hover:shadow-soft;
   }
 
-  .resources-section {
-    @apply bg-soft-white py-20 sm:py-24 lg:py-32;
-  }
-
-  .resource-heading {
-    @apply mb-10 lg:mb-14;
-  }
-
-  .resource-grid {
-    @apply grid gap-5 md:grid-cols-12;
-  }
-
-  .resource-card {
-    @apply relative min-h-[23rem] overflow-hidden rounded-[2rem] bg-coexistir-700 shadow-card md:col-span-6 lg:min-h-[27rem];
-  }
-
-  .resource-card:nth-child(1),
-  .resource-card:nth-child(4) {
-    @apply md:col-span-7;
-  }
-
-  .resource-card:nth-child(2),
-  .resource-card:nth-child(3) {
-    @apply md:col-span-5;
-  }
-
-  .resource-card > img {
-    @apply absolute inset-0 h-full w-full object-cover transition duration-700;
-  }
-
-  .resource-importancia-salud-mental > img {
-    object-position: center 10%;
-  }
-
-  .resource-salud-mental-online > img {
-    object-position: center 55%;
-  }
-
-  .resource-psicoterapia > img {
-    object-position: 42% center;
-  }
-
-  .resource-primeros-auxilios-psicologicos > img {
-    object-position: center 12%;
-  }
-
-  .resource-card:hover > img {
-    @apply scale-105;
-  }
-
-  .resource-overlay {
-    @apply absolute inset-0 bg-gradient-to-t from-ink/85 via-coexistir-900/25 to-transparent;
-  }
-
-  .resource-content {
-    @apply absolute inset-x-0 bottom-0 z-10 p-6 text-white sm:p-8;
-  }
-
-  .resource-content > span {
-    @apply text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-sage-100;
-  }
-
-  .resource-content h3 {
-    @apply mt-3 max-w-[15ch] font-display text-3xl font-normal leading-none sm:text-4xl;
-  }
-
-  .resource-content a {
-    @apply mt-6 inline-flex min-h-11 items-center gap-3 rounded-full bg-white/90 px-4 text-xs font-semibold text-coexistir-900 backdrop-blur transition hover:bg-white;
-  }
-
-  .resource-content i {
-    @apply font-normal not-italic;
-  }
-
-  .contact-section {
-    @apply bg-sage-400 py-20 sm:py-24 lg:py-32;
-  }
-
-  .contact-container {
-    @apply grid items-center gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16;
-  }
-
-  .contact-intro > p:not(.section-kicker, .privacy-note) {
-    @apply mt-6 max-w-lg text-base leading-8 text-coexistir-700;
-  }
-
-  .contact-details {
-    @apply mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2;
-  }
-
-  .contact-details a {
-    @apply rounded-2xl border border-coexistir-900/10 bg-white/55 p-4 text-sm font-semibold text-coexistir-900 backdrop-blur;
-  }
-
-  .contact-details a > span {
-    @apply mb-1 block text-[0.65rem] uppercase tracking-[0.16em] text-coexistir-700;
-  }
-
-  .privacy-note {
-    @apply mt-6 flex items-center gap-2 text-xs text-coexistir-700;
-  }
-
-  .privacy-note > span {
-    @apply grid size-5 place-items-center rounded-full bg-coexistir-900 text-[0.65rem] text-white;
-  }
-
-  .contact-slogan {
-    @apply m-0 text-center font-display text-3xl font-normal tracking-[-0.025em] text-coexistir-900 sm:text-4xl lg:col-span-2 lg:text-5xl;
-  }
-
-  .contact-form {
-    @apply rounded-[2rem] border border-white/70 bg-white p-6 shadow-soft sm:p-8 lg:p-10;
-  }
-
-  .form-heading {
-    @apply mb-7 border-b border-line pb-6;
-  }
-
-  .form-heading > span {
-    @apply font-display text-2xl text-coexistir-900;
-  }
-
-  .form-heading > p {
-    @apply mt-1 text-sm text-muted;
-  }
-
-  .contact-form > label:not(.human-check) {
-    @apply mb-5 grid gap-2 text-[0.7rem] font-semibold uppercase tracking-[0.12em] text-coexistir-700;
-  }
-
-  .contact-form input:not([type="checkbox"]) {
-    @apply h-13 w-full rounded-xl border border-line bg-soft-white px-4 text-base font-normal normal-case tracking-normal text-ink outline-none transition focus:border-coexistir-500 focus:ring-4 focus:ring-coexistir-500/10;
-  }
-
-  .human-check {
-    @apply relative my-6 flex w-fit cursor-pointer items-center gap-3 text-sm text-coexistir-900;
-  }
-
-  .human-check input {
-    @apply absolute opacity-0;
-  }
-
-  .check-box {
-    @apply grid size-6 place-items-center rounded-md border border-coexistir-500 bg-white text-transparent transition;
-  }
-
-  .human-check input:checked + .check-box {
-    @apply border-coexistir-900 bg-coexistir-900 text-white;
-  }
-
-  .contact-form > button {
-    @apply flex min-h-13 w-full cursor-pointer items-center justify-between rounded-full border-0 bg-coexistir-900 px-6 font-semibold text-white transition hover:-translate-y-0.5 hover:bg-coexistir-700;
-  }
-
-  .form-success {
-    @apply mt-4 rounded-xl bg-sage-100 p-3 text-sm text-coexistir-900;
-  }
-
+  /* ==========================================================================
+     PIE DE PÁGINA (SITE FOOTER)
+     ========================================================================== */
   .site-footer {
-    @apply bg-coexistir-900 py-14 text-white;
+    @apply border-t border-white/10 bg-coexistir-900 py-16 text-white;
   }
 
   .footer-inner {
@@ -659,79 +441,50 @@
   }
 
   .footer-top {
-    @apply grid gap-8 border-b border-white/10 pb-10 lg:grid-cols-[1fr_1fr_auto] lg:items-end;
+    @apply grid gap-8 border-b border-white/15 pb-10 lg:grid-cols-[1fr_1fr_auto] lg:items-center;
   }
 
   .footer-brand {
-    @apply flex flex-col items-start;
+    @apply flex flex-col items-start transition hover:opacity-90;
   }
 
   .footer-brand strong {
-    @apply font-display text-4xl font-normal;
+    @apply font-display text-3xl font-normal text-white sm:text-4xl;
   }
 
   .footer-brand small {
-    @apply mt-1 text-[0.6rem] font-semibold uppercase tracking-[0.2em] text-icon-muted;
+    @apply mt-1 text-xs font-semibold uppercase tracking-wider text-coexistir-active;
   }
 
   .footer-top > p {
-    @apply max-w-sm text-sm leading-6 text-sage-100/75;
+    @apply max-w-md text-sm leading-relaxed text-white/75;
   }
 
   .footer-nav {
-    @apply flex flex-wrap gap-x-5 gap-y-2;
+    @apply flex flex-wrap gap-2;
   }
 
   .footer-nav a {
-    @apply min-h-10 content-center text-xs font-semibold text-sage-100 transition hover:text-white;
+    @apply rounded-full px-3.5 py-1.5 text-xs font-semibold text-white/80 transition hover:bg-white/10 hover:text-white;
   }
 
   .footer-bottom {
-    @apply flex flex-col gap-6 pt-7 text-xs text-sage-100/70 md:flex-row md:items-center;
+    @apply flex flex-col gap-6 pt-8 text-xs text-white/70 md:flex-row md:items-center md:justify-between;
   }
 
-  .social-links {
-    @apply flex gap-2;
+  .footer-wa-channel {
+    @apply inline-flex items-center gap-2 rounded-full border border-coexistir-active/50 bg-white/10 px-5 py-2.5 text-xs font-bold text-white shadow-xs transition hover:bg-coexistir-active hover:text-coexistir-900;
   }
 
-  .social-links a {
-    @apply grid size-10 place-items-center rounded-full border border-icon-muted/60 text-[0.65rem] font-semibold uppercase text-icon-muted transition hover:border-icon-muted hover:bg-icon-muted hover:text-coexistir-900;
-  }
-
-  .footer-contact {
-    @apply flex flex-col gap-1 md:ml-auto md:text-right;
-  }
-
-  .footer-bottom > p {
-    @apply m-0 md:ml-6;
-  }
-
+  /* ==========================================================================
+     BOTÓN FLOTANTE Y PANEL DE WHATSAPP
+     ========================================================================== */
   .floating-contact {
-    @apply fixed bottom-5 right-5 z-[60] grid size-14 cursor-pointer place-items-center overflow-hidden rounded-[50%_50%_50%_18%] border border-coexistir-900/10 bg-gradient-to-br from-[#e6c96b] via-[#d4af37] to-[#8a6b1f] text-white shadow-[0_16px_38px_-12px_rgba(212,175,55,0.65)] ring-1 ring-coexistir-900/10 transition duration-300 before:pointer-events-none before:absolute before:inset-x-1 before:top-1 before:h-1/2 before:rounded-full before:bg-gradient-to-b before:from-white/30 before:to-transparent before:content-[''] hover:-translate-y-1 hover:scale-105 hover:shadow-[0_20px_45px_-12px_rgba(212,175,55,0.75)] sm:bottom-7 sm:right-7;
-  }
-
-  .floating-socials {
-    @apply fixed bottom-[5.75rem] right-5 z-[60] flex flex-col items-center gap-2 transition duration-300 sm:bottom-[6.5rem] sm:right-7;
-  }
-
-  .floating-socials.is-hidden {
-    @apply pointer-events-none translate-y-3 opacity-0;
-  }
-
-  .floating-social-link {
-    @apply grid size-11 place-items-center rounded-full border border-white/30 bg-coexistir-900 p-3 text-white shadow-[0_12px_30px_-12px_rgba(212,175,55,0.8)] ring-1 ring-coexistir-900/10 transition duration-300 hover:-translate-y-0.5 hover:bg-coexistir-700 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-coexistir-active;
-  }
-
-  .floating-social-link svg {
-    @apply size-full;
-  }
-
-  .floating-contact.is-active {
-    @apply scale-105 from-[#c9a244] via-[#b3902f] to-[#6b5518];
+    @apply fixed bottom-6 right-6 z-50 grid size-14 place-items-center rounded-full border border-coexistir-active bg-gradient-to-br from-[#e6c96b] via-[#d4af37] to-[#8a6b1f] text-coexistir-900 shadow-soft transition duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-card sm:bottom-8 sm:right-8;
   }
 
   .whatsapp-glyph {
-    @apply relative z-10 grid size-8 place-items-center drop-shadow-sm;
+    @apply grid size-7 place-items-center drop-shadow-xs;
   }
 
   .whatsapp-glyph svg {
@@ -739,19 +492,19 @@
   }
 
   .whatsapp-question-panel {
-    @apply fixed bottom-24 right-4 z-[59] max-h-[calc(100vh-7.5rem)] w-[min(46rem,calc(100vw-2rem))] overflow-y-auto rounded-[2rem_2rem_0.75rem_2rem] border border-coexistir-900/10 bg-gradient-to-br from-white/85 via-sage-100/75 to-sage-400/55 shadow-[0_28px_80px_-28px_rgba(212,175,55,0.48)] ring-1 ring-coexistir-900/10 backdrop-blur-2xl after:pointer-events-none after:absolute after:-right-16 after:-top-16 after:size-40 after:rounded-full after:bg-white/30 after:blur-2xl after:content-[''] sm:right-7;
+    @apply fixed bottom-24 right-4 z-50 max-h-[calc(100vh-7.5rem)] w-[min(42rem,calc(100vw-2rem))] overflow-y-auto rounded-[2rem] border border-coexistir-900/20 bg-white/95 shadow-soft backdrop-blur-2xl sm:right-8;
   }
 
   .whatsapp-panel-close {
-    @apply absolute right-3 top-3 z-30 grid size-9 cursor-pointer place-items-center rounded-full border-0 bg-white/15 p-0 text-2xl leading-none text-white shadow-sm backdrop-blur-md transition hover:rotate-90 hover:bg-white/25;
+    @apply absolute right-4 top-4 z-30 grid size-8 cursor-pointer place-items-center rounded-full border-0 bg-white/20 text-xl font-bold leading-none text-white backdrop-blur-md transition hover:bg-white/30;
   }
 
   .whatsapp-panel-header {
-    @apply relative z-20 flex items-center gap-3 border-b border-coexistir-900/20 bg-gradient-to-br from-coexistir-900/95 via-coexistir-700/90 to-coexistir-500/80 py-5 pl-5 pr-14 text-white backdrop-blur-xl;
+    @apply relative z-20 flex items-center gap-3 border-b border-white/10 bg-coexistir-900 px-6 py-5 text-white;
   }
 
   .whatsapp-panel-mark {
-    @apply grid size-11 place-items-center rounded-2xl border border-coexistir-900/10 bg-gradient-to-br from-[#e6c96b] via-[#d4af37] to-[#8a6b1f] p-2.5 text-white shadow-[0_10px_25px_-12px_rgba(212,175,55,0.85)];
+    @apply grid size-10 place-items-center rounded-xl bg-coexistir-active p-2 text-coexistir-900 shadow-xs;
   }
 
   .whatsapp-panel-mark svg {
@@ -759,683 +512,58 @@
   }
 
   .whatsapp-panel-header p {
-    @apply m-0 font-display text-lg;
+    @apply m-0 font-display text-lg text-white;
   }
 
   .whatsapp-panel-header span:not(.whatsapp-panel-mark) {
-    @apply mt-0.5 block text-xs text-icon-muted;
+    @apply mt-0.5 block text-xs text-coexistir-active;
   }
 
   .whatsapp-panel-body {
-    @apply relative z-20 grid md:grid-cols-[12rem_minmax(0,1fr)];
-  }
-
-  .whatsapp-panel-visual {
-    @apply relative m-4 mb-0 min-h-48 overflow-hidden rounded-2xl bg-sage-100 md:mb-4 md:mr-0 md:min-h-0;
-  }
-
-  .whatsapp-panel-visual img {
-    @apply h-full w-full object-cover object-top;
-  }
-
-  .whatsapp-panel-visual figcaption {
-    @apply absolute inset-x-3 bottom-3 rounded-xl bg-coexistir-900/85 px-3 py-2 text-center text-[0.65rem] font-semibold text-white backdrop-blur;
-  }
-
-  .whatsapp-panel-content {
-    @apply min-w-0 p-5;
+    @apply p-6 sm:p-8;
   }
 
   .whatsapp-question-panel h2 {
-    @apply relative z-20 m-0 font-display text-2xl font-normal leading-tight text-coexistir-900;
+    @apply m-0 font-display text-2xl font-normal leading-tight text-coexistir-900;
   }
 
   .whatsapp-panel-description {
-    @apply relative z-20 mb-4 mt-2 text-xs leading-5 text-muted;
+    @apply mb-5 mt-2 text-xs leading-relaxed text-muted;
   }
 
   .whatsapp-question-list {
-    @apply relative z-20 grid gap-2;
+    @apply grid gap-2.5;
   }
 
   .whatsapp-question-list a {
-    @apply flex min-h-11 items-center justify-between gap-4 rounded-xl border border-coexistir-900/10 bg-white/55 px-3 py-2 text-[0.72rem] font-semibold leading-4 text-coexistir-700 shadow-[0_8px_22px_-18px_rgba(212,175,55,0.5)] backdrop-blur-md transition duration-300 hover:translate-x-1 hover:border-coexistir-500/30 hover:bg-white/80 hover:shadow-[0_12px_28px_-18px_rgba(212,175,55,0.6)];
+    @apply flex min-h-12 items-center justify-between gap-4 rounded-xl border border-coexistir-900/10 bg-sage-100/60 px-4 py-3 text-xs font-semibold text-coexistir-900 shadow-xs transition hover:translate-x-1 hover:border-coexistir-active hover:bg-white;
   }
 
   .whatsapp-question-list i {
-    @apply text-xl font-normal not-italic text-[#d4af37];
+    @apply text-base font-bold not-italic text-coexistir-active;
   }
 
   .whatsapp-custom-message {
-    @apply relative z-20 mt-4 rounded-2xl border border-coexistir-900/10 bg-white/45 p-3;
+    @apply mt-6 rounded-2xl border border-coexistir-900/10 bg-sage-100/40 p-4;
   }
 
   .whatsapp-custom-message > label {
-    @apply mb-2 block text-xs font-semibold text-coexistir-900;
+    @apply mb-2 block text-xs font-bold text-coexistir-900;
   }
 
   .whatsapp-custom-message textarea {
-    @apply block min-h-20 w-full resize-none rounded-xl border border-coexistir-900/15 bg-white/70 px-3 py-2 text-xs leading-5 text-ink outline-none transition placeholder:text-muted/60 focus:border-coexistir-500 focus:ring-4 focus:ring-coexistir-500/10;
+    @apply block min-h-20 w-full resize-none rounded-xl border border-line bg-white px-3 py-2.5 text-xs text-ink outline-none transition placeholder:text-muted/60 focus:border-coexistir-700 focus:ring-4 focus:ring-coexistir-700/10;
   }
 
   .whatsapp-message-actions {
-    @apply mt-2 flex items-center justify-between gap-3;
+    @apply mt-3 flex items-center justify-between gap-3;
   }
 
   .whatsapp-message-actions > span {
-    @apply text-[0.65rem] tabular-nums text-coexistir-700/70;
+    @apply text-[0.68rem] tabular-nums text-muted;
   }
 
   .whatsapp-message-actions button {
-    @apply inline-flex min-h-10 cursor-pointer items-center justify-center gap-2 rounded-full border-0 bg-coexistir-900 px-4 text-xs font-semibold text-white transition hover:-translate-y-0.5 hover:bg-coexistir-700 disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:translate-y-0;
-  }
-}
-
-/* Minimal + Flat visual system
-   Clean, structured light surfaces; gold reserved as a single accent. */
-@layer components {
-  body {
-    background:
-      radial-gradient(circle at 10% 0%, rgb(212 175 55 / 0.08), transparent 30rem),
-      var(--coexistir-off-white);
-  }
-
-  .page-shell {
-    position: relative;
-    isolation: isolate;
-  }
-
-  .page-shell::before {
-    position: fixed;
-    inset: 0;
-    z-index: -1;
-    pointer-events: none;
-    background:
-      radial-gradient(circle at 82% 10%, rgb(212 175 55 / 0.07), transparent 26rem);
-    content: "";
-  }
-
-  .site-main {
-    position: relative;
-  }
-
-  .site-header,
-  .brand-copy strong,
-  .side-nav a,
-  .site-footer,
-  .footer-brand strong,
-  .footer-nav a,
-  .footer-bottom {
-    color: var(--coexistir-text);
-  }
-
-  .brand-copy small,
-  .footer-brand small,
-  .footer-bottom > p,
-  .footer-nav {
-    color: var(--coexistir-text-muted);
-  }
-
-  .side-nav a:hover {
-    color: var(--coexistir-text);
-  }
-
-  .menu-toggle span {
-    background: var(--coexistir-text);
-  }
-
-  .footer-top > p {
-    color: var(--coexistir-text-muted);
-  }
-
-  .site-header {
-    border-bottom-color: rgb(0 0 0 / 0.08);
-    background: rgb(250 249 246 / 0.85);
-    box-shadow:
-      inset 0 1px 0 rgb(255 255 255 / 0.7),
-      0 8px 24px rgb(0 0 0 / 0.05);
-    backdrop-filter: blur(18px) saturate(120%);
-  }
-
-  .header-inner::after {
-    position: absolute;
-    inset: 0 5% auto;
-    height: 1px;
-    pointer-events: none;
-    background: linear-gradient(90deg, transparent, rgb(0 0 0 / 0.04), transparent);
-    content: "";
-  }
-
-  .brand-logo {
-    border: 1px solid rgb(0 0 0 / 0.06);
-    box-shadow:
-      inset 0 1px 0 rgb(255 255 255 / 0.6),
-      0 5px 12px rgb(0 0 0 / 0.08);
-  }
-
-  .side-nav {
-    border-color: rgb(0 0 0 / 0.08);
-    background: rgb(255 255 255 / 0.95);
-    box-shadow:
-      inset 0 1px 0 rgb(255 255 255 / 0.7),
-      0 14px 32px rgb(0 0 0 / 0.1);
-  }
-
-  .side-nav a {
-    border-radius: 999px;
-  }
-
-  .side-nav a:hover {
-    background: rgb(0 0 0 / 0.04);
-    box-shadow: none;
-  }
-
-  .header-cta,
-  .button-primary,
-  .button-secondary,
-  .service-whatsapp,
-  .resource-content a,
-  .contact-form > button {
-    position: relative;
-    overflow: hidden;
-    border: 1px solid rgb(0 0 0 / 0.08);
-    box-shadow:
-      inset 0 1px 0 rgb(255 255 255 / 0.5),
-      0 7px 18px rgb(0 0 0 / 0.08);
-  }
-
-  .header-cta::before,
-  .button-primary::before,
-  .button-secondary::before,
-  .service-whatsapp::before,
-  .resource-content a::before,
-  .contact-form > button::before {
-    position: absolute;
-    inset: 1px 10% 72%;
-    pointer-events: none;
-    border-radius: inherit;
-    background: linear-gradient(180deg, rgb(255 255 255 / 0.24), transparent);
-    content: "";
-  }
-
-  .button-primary,
-  .contact-form > button {
-    background: var(--coexistir-green-900);
-  }
-
-  .button-secondary,
-  .header-cta {
-    background: rgb(255 255 255);
-  }
-
-  .menu-toggle {
-    border-color: rgb(0 0 0 / 0.12);
-    background: rgb(0 0 0 / 0.04);
-    box-shadow:
-      inset 0 1px 0 rgb(255 255 255 / 0.6),
-      0 5px 12px rgb(0 0 0 / 0.08);
-  }
-
-  .hero,
-  .resources-section {
-    position: relative;
-    background:
-      radial-gradient(circle at 88% 12%, rgb(212 175 55 / 0.12), transparent 25rem),
-      linear-gradient(155deg, rgb(255 255 255 / 0.6), rgb(246 241 229 / 0.4));
-  }
-
-  .hero::before,
-  .resources-section::before,
-  .services-section::before,
-  .contact-section::before {
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    background:
-      linear-gradient(118deg, transparent 15%, rgb(212 175 55 / 0.1) 35%, transparent 54%),
-      radial-gradient(circle at 72% 8%, rgb(255 255 255 / 0.6), transparent 18rem);
-    content: "";
-  }
-
-  .hero-inner,
-  .section-container {
-    position: relative;
-    z-index: 1;
-  }
-
-  .hero-content {
-    position: relative;
-    z-index: 2;
-  }
-
-  .hero-eyebrow,
-  .section-kicker {
-    width: fit-content;
-    padding: 0.55rem 0.85rem;
-    border: 1px solid rgb(212 175 55 / 0.22);
-    border-radius: 999px;
-    background: rgb(255 255 255);
-    box-shadow: 0 4px 12px rgb(212 175 55 / 0.08);
-    backdrop-filter: blur(8px);
-  }
-
-  .hero-image-wrap,
-  .calm-visual,
-  .founder-portrait,
-  .service-visual,
-  .resource-card {
-    isolation: isolate;
-    border: 1px solid rgb(0 0 0 / 0.08);
-    box-shadow:
-      inset 0 1px 0 rgb(255 255 255 / 0.7),
-      0 16px 36px rgb(0 0 0 / 0.08);
-  }
-
-  .hero-image-wrap::after,
-  .calm-visual::before,
-  .founder-portrait::before,
-  .service-visual::after,
-  .resource-card::after {
-    position: absolute;
-    inset: 0;
-    z-index: 2;
-    pointer-events: none;
-    background:
-      linear-gradient(128deg, rgb(255 255 255 / 0.12), transparent 24%, transparent 72%, rgb(212 175 55 / 0.06)),
-      linear-gradient(180deg, rgb(255 255 255 / 0.12), transparent 22%);
-    content: "";
-  }
-
-  .hero-image-wrap {
-    border-radius: 1.75rem;
-    background: var(--coexistir-sage-100);
-  }
-
-  .hero-image-wrap figcaption,
-  .care-note,
-  .service-number {
-    border-color: rgb(0 0 0 / 0.08);
-    background: rgb(255 255 255 / 0.9);
-    box-shadow:
-      inset 0 1px 0 rgb(255 255 255 / 0.7),
-      0 7px 18px rgb(0 0 0 / 0.06);
-    backdrop-filter: blur(14px) saturate(115%);
-  }
-
-  .hero-highlights li {
-    padding: 0.7rem 0.8rem;
-    border: 1px solid rgb(212 175 55 / 0.16);
-    border-radius: 0.85rem;
-    background: rgb(255 255 255 / 0.75);
-    box-shadow: none;
-    backdrop-filter: blur(8px);
-  }
-
-  .about-section {
-    position: relative;
-    background:
-      radial-gradient(circle at 8% 42%, rgb(212 175 55 / 0.08), transparent 28rem),
-      rgb(250 249 246);
-  }
-
-  .philosophy-block,
-  .founder-block,
-  .virtual-block {
-    position: relative;
-    border-color: rgb(0 0 0 / 0.08);
-    border-radius: 1.75rem;
-    box-shadow:
-      inset 0 1px 0 rgb(255 255 255 / 0.7),
-      0 16px 38px rgb(0 0 0 / 0.08);
-  }
-
-  .philosophy-block {
-    background: rgb(255 255 255 / 0.82);
-    backdrop-filter: blur(12px);
-  }
-
-  .founder-block {
-    background: rgb(255 255 255 / 0.92);
-  }
-
-  .virtual-block {
-    background:
-      radial-gradient(circle at 82% 12%, rgb(212 175 55 / 0.24), transparent 25rem),
-      var(--coexistir-green-900);
-  }
-
-  .virtual-block::after {
-    position: absolute;
-    inset: 1px 8% auto;
-    height: 24%;
-    pointer-events: none;
-    border-radius: 0 0 50% 50%;
-    background: linear-gradient(180deg, rgb(255 255 255 / 0.08), transparent);
-    content: "";
-  }
-
-  .copy-panel,
-  .founder-copy,
-  .virtual-copy {
-    position: relative;
-    z-index: 3;
-  }
-
-  .services-section {
-    position: relative;
-    background:
-      radial-gradient(circle at 14% 18%, rgb(255 255 255 / 0.6), transparent 24rem),
-      var(--coexistir-sage-100);
-  }
-
-  .calculator-section {
-    position: relative;
-    background:
-      radial-gradient(circle at 14% 18%, rgb(255 255 255 / 0.7), transparent 24rem),
-      var(--coexistir-off-white);
-  }
-
-  .service-card {
-    position: relative;
-    border-color: rgb(0 0 0 / 0.08);
-    border-radius: 1.5rem;
-    background: rgb(255 255 255 / 0.9);
-    box-shadow:
-      inset 0 1px 0 rgb(255 255 255 / 0.7),
-      0 12px 28px rgb(0 0 0 / 0.06);
-    backdrop-filter: blur(10px) saturate(112%);
-  }
-
-  .service-card::before {
-    position: absolute;
-    inset: 1px 8% auto;
-    z-index: 3;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, rgb(0 0 0 / 0.08), transparent);
-    content: "";
-  }
-
-  .service-card:hover {
-    border-color: rgb(212 175 55 / 0.35);
-    box-shadow:
-      inset 0 1px 0 rgb(255 255 255 / 0.8),
-      0 18px 38px rgb(0 0 0 / 0.1);
-  }
-
-  .service-whatsapp {
-    border-color: rgb(212 175 55 / 0.24);
-    background: rgb(255 255 255);
-  }
-
-  .service-whatsapp:hover {
-    background: var(--coexistir-green-900);
-  }
-
-  .resource-card {
-    border-radius: 1.5rem;
-  }
-
-  .resource-overlay {
-    background:
-      linear-gradient(to top, rgb(26 26 24 / 0.78), rgb(212 175 55 / 0.22) 58%, rgb(255 255 255 / 0.08));
-  }
-
-  .resource-content {
-    z-index: 4;
-  }
-
-  .resource-content a {
-    border-color: rgb(0 0 0 / 0.1);
-    background: rgb(255 255 255 / 0.94);
-  }
-
-  .contact-section {
-    position: relative;
-    background:
-      radial-gradient(circle at 86% 14%, rgb(255 255 255 / 0.6), transparent 24rem),
-      var(--coexistir-sage-400);
-  }
-
-  .contact-details a,
-  .contact-form,
-  .form-success {
-    border-color: rgb(0 0 0 / 0.08);
-    background: rgb(255 255 255 / 0.9);
-    box-shadow:
-      inset 0 1px 0 rgb(255 255 255 / 0.7),
-      0 12px 28px rgb(0 0 0 / 0.06);
-    backdrop-filter: blur(14px) saturate(112%);
-  }
-
-  .contact-details a {
-    border-radius: 1.25rem;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-  }
-
-  .contact-details a:hover {
-    transform: translateY(-2px);
-    box-shadow:
-      inset 0 1px 0 rgb(255 255 255 / 0.8),
-      0 16px 34px rgb(0 0 0 / 0.1);
-  }
-
-  .contact-form {
-    position: relative;
-    overflow: hidden;
-    border-radius: 1.75rem;
-  }
-
-  .contact-form::before {
-    position: absolute;
-    inset: 1px 8% auto;
-    height: 20%;
-    pointer-events: none;
-    border-radius: 0 0 50% 50%;
-    background: linear-gradient(180deg, rgb(255 255 255 / 0.4), transparent);
-    content: "";
-  }
-
-  .contact-form > * {
-    position: relative;
-    z-index: 1;
-  }
-
-  .contact-form input:not([type="checkbox"]) {
-    border-color: rgb(0 0 0 / 0.12);
-    background: rgb(255 255 255);
-    box-shadow:
-      inset 0 1px 3px rgb(212 175 55 / 0.08),
-      0 1px 0 rgb(255 255 255 / 0.7);
-  }
-
-  .contact-form input:not([type="checkbox"]):focus {
-    background: rgb(255 255 255);
-    box-shadow:
-      inset 0 1px 3px rgb(212 175 55 / 0.1),
-      0 0 0 4px rgb(212 175 55 / 0.16),
-      0 8px 20px rgb(0 0 0 / 0.06);
-  }
-
-  .check-box {
-    border-color: rgb(0 0 0 / 0.14);
-    background: rgb(255 255 255);
-    box-shadow:
-      inset 0 1px 0 rgb(255 255 255 / 0.7),
-      0 4px 10px rgb(0 0 0 / 0.06);
-  }
-
-  .site-footer {
-    position: relative;
-    overflow: hidden;
-    border-top: 1px solid rgb(0 0 0 / 0.08);
-    background:
-      radial-gradient(circle at 18% 0%, rgb(212 175 55 / 0.18), transparent 28rem),
-      rgb(250 249 246);
-    box-shadow:
-      inset 0 1px 0 rgb(255 255 255 / 0.7),
-      0 -10px 30px rgb(0 0 0 / 0.04);
-  }
-
-  .site-footer::before {
-    position: absolute;
-    inset: 0 0 auto;
-    height: 28%;
-    pointer-events: none;
-    background: linear-gradient(180deg, rgb(255 255 255 / 0.3), transparent);
-    content: "";
-  }
-
-  .footer-inner {
-    position: relative;
-    z-index: 1;
-  }
-
-  .social-links a {
-    border-color: rgb(0 0 0 / 0.08);
-    background: rgb(0 0 0 / 0.04);
-    box-shadow:
-      inset 0 1px 0 rgb(255 255 255 / 0.6),
-      0 4px 10px rgb(0 0 0 / 0.06);
-  }
-
-  .floating-contact,
-  .floating-social-link,
-  .whatsapp-question-panel,
-  .whatsapp-panel-mark {
-    border-color: rgb(212 175 55 / 0.28);
-    box-shadow:
-      inset 0 1px 0 rgb(255 255 255 / 0.6),
-      0 16px 36px rgb(212 175 55 / 0.16);
-  }
-
-  .whatsapp-question-panel {
-    background:
-      radial-gradient(circle at 88% 6%, rgb(212 175 55 / 0.08), transparent 11rem),
-      rgb(255 255 255 / 0.96);
-    backdrop-filter: blur(18px) saturate(118%);
-  }
-
-  .whatsapp-panel-header {
-    border-bottom-color: rgb(0 0 0 / 0.08);
-    box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.7);
-  }
-
-  .whatsapp-question-list a,
-  .whatsapp-custom-message {
-    border-color: rgb(0 0 0 / 0.08);
-    background: rgb(0 0 0 / 0.03);
-    box-shadow:
-      inset 0 1px 0 rgb(255 255 255 / 0.6),
-      0 5px 14px rgb(0 0 0 / 0.04);
-  }
-
-  .whatsapp-panel-visual {
-    border: 1px solid rgb(0 0 0 / 0.08);
-    box-shadow:
-      inset 0 1px 0 rgb(255 255 255 / 0.6),
-      0 10px 24px rgb(0 0 0 / 0.06);
-  }
-
-  .whatsapp-custom-message textarea {
-    box-shadow: inset 0 1px 3px rgb(212 175 55 / 0.08);
-  }
-
-  .info-modal-backdrop {
-    position: fixed;
-    inset: 0;
-    z-index: 80;
-    display: grid;
-    place-items: center;
-    padding: 1.25rem;
-    background: rgb(26 26 24 / 0.3);
-    backdrop-filter: blur(10px);
-  }
-
-  .info-modal {
-    position: relative;
-    width: min(34rem, 100%);
-    overflow: hidden;
-    padding: 2.5rem;
-    border: 1px solid rgb(212 175 55 / 0.24);
-    border-radius: 1.5rem;
-    background:
-      radial-gradient(circle at 90% 0%, rgb(212 175 55 / 0.1), transparent 16rem),
-      rgb(255 255 255 / 0.98);
-    color: var(--coexistir-text);
-    box-shadow:
-      inset 0 1px 0 rgb(255 255 255 / 0.7),
-      0 24px 64px rgb(0 0 0 / 0.16);
-    backdrop-filter: blur(18px) saturate(118%);
-  }
-
-  .info-modal > button {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    display: grid;
-    width: 2.5rem;
-    height: 2.5rem;
-    place-items: center;
-    border: 1px solid rgb(0 0 0 / 0.12);
-    border-radius: 999px;
-    background: rgb(255 255 255);
-    color: var(--coexistir-green-900);
-    box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.7), 0 4px 10px rgb(0 0 0 / 0.06);
-    cursor: pointer;
-  }
-
-  .info-modal > p:first-of-type {
-    margin: 0 0 0.75rem;
-    color: var(--coexistir-green-500);
-    font-size: 0.7rem;
-    font-weight: 600;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-  }
-
-  .info-modal h2 {
-    margin: 0;
-    color: var(--coexistir-green-900);
-    font-family: "DM Serif Display", Georgia, serif;
-    font-size: clamp(2rem, 5vw, 3.25rem);
-    font-weight: 400;
-    line-height: 1;
-  }
-
-  .info-modal > p:last-child {
-    margin: 1.25rem 0 0;
-    color: var(--coexistir-text-muted);
-    line-height: 1.8;
-  }
-}
-
-@media (min-width: 64rem) {
-  @layer components {
-    .side-nav {
-      border-color: transparent;
-      background: transparent;
-      box-shadow: none;
-    }
-  }
-}
-
-@media (max-width: 40rem) {
-  @layer components {
-    .hero-image-wrap,
-    .philosophy-block,
-    .founder-block,
-    .virtual-block,
-    .resource-card,
-    .contact-form {
-      border-radius: 1.75rem;
-    }
-
-    .hero-highlights li {
-      padding: 0.6rem 0.7rem;
-    }
-
-    .info-modal {
-      padding: 2rem 1.5rem;
-    }
+    @apply inline-flex min-h-10 cursor-pointer items-center justify-center gap-2 rounded-full border-0 bg-coexistir-700 px-5 text-xs font-bold text-white transition hover:bg-coexistir-500 disabled:opacity-40;
   }
 }

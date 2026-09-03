@@ -1,29 +1,33 @@
 {
   "header": {
-    "title": "Servicios de numerología",
-    "subtitle": "¿Qué te ofrecemos?"
+    "title": "Servicio de Numerología",
+    "subtitle": "Tarifas y Consultas"
   },
   "items": [
     {
       "id": "sesion-numerologia",
       "title": "Sesión de Numerología",
-      "description": "Una lectura completa de tu fecha de nacimiento y tu número personal, con interpretación de tu energía, tus ciclos y una guía clara para tu momento actual.",
-      "price": "S/ 650",
+      "tagline": "Guía completa para tu sanación personal y del alma",
+      "badge": "Lectura Completa",
+      "description": "Una lectura completa con tu hora y fecha de nacimiento; veremos tu energía, tus ciclos repetitivos, camino de vida, será una guía completa para tu sanación personal y del alma.",
+      "price": "S/ 300",
       "priceNote": "Sesión individual",
       "priceUnit": "por sesión",
       "image": "service-1.svg",
-      "imageAlt": "Sesión individual de numerología con lectura de tu número personal",
+      "imageAlt": "Sesión individual de Numerología con hora y fecha de nacimiento",
       "visualVariant": "rectangular"
     },
     {
-      "id": "curso-numerologia",
-      "title": "Curso de Numerología",
-      "description": "Aprende a interpretar la energía de tu fecha de nacimiento paso a paso. Un recorrido práctico y ordenado para entender y aplicar la numerología a tu vida.",
-      "price": "S/ 750",
-      "priceNote": "Curso completo",
-      "priceUnit": "inscripción",
+      "id": "sesion-astrokab",
+      "title": "Sesión de AstroKab",
+      "tagline": "Descodifica tu pasado, programa tu futuro",
+      "badge": "Mapa Astral + Kabbalah",
+      "description": "Con tu hora y fecha de nacimiento, aprenderás a conocerte mejor y a tomar mejores decisiones en tu vida. Tú tienes un propósito en esta vida. No lo dudes.",
+      "price": "S/ 700",
+      "priceNote": "Sesión individual",
+      "priceUnit": "por sesión",
       "image": "service-2.svg",
-      "imageAlt": "Curso de numerología para aprender a leer tu número personal",
+      "imageAlt": "Sesión de AstroKab: Mapa Astral y Kabbalah",
       "visualVariant": "capsule"
     }
   ]

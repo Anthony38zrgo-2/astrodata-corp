@@ -1,6 +1,5 @@
 <script setup>
-import { computed, onBeforeUnmount, onMounted, ref } from "vue";
-import { siFacebook, siInstagram, siTiktok } from "simple-icons";
+import { onBeforeUnmount, onMounted, ref } from "vue";
 import { siteData } from "@/constants/company";
 import { useWhatsApp } from "@/composables/useWhatsApp";
 import panelIllustration from "@/assets/images/hero-numerologia.svg";
@@ -8,16 +7,6 @@ import panelIllustration from "@/assets/images/hero-numerologia.svg";
 const panelOpen = ref(false);
 const customMessage = ref("");
 const { createWhatsAppUrl, whatsappUrl } = useWhatsApp();
-const socialIcons = {
-  Facebook: siFacebook,
-  Instagram: siInstagram,
-  TikTok: siTiktok,
-};
-const floatingSocialNetworks = computed(() =>
-  siteData.footer.socialNetworks
-    .filter((network) => network.url && socialIcons[network.platform])
-    .map((network) => ({ ...network, icon: socialIcons[network.platform] })),
-);
 
 const handleFloatingButton = () => {
   if (!panelOpen.value) {
@@ -76,7 +65,7 @@ onBeforeUnmount(() => document.removeEventListener("keydown", handleEscape));
           </svg>
         </span>
         <div>
-          <p>Astrodata</p>
+          <p>{{ siteData.brand.name }}</p>
           <span>En línea</span>
         </div>
       </div>
@@ -84,7 +73,7 @@ onBeforeUnmount(() => document.removeEventListener("keydown", handleEscape));
         <figure class="whatsapp-panel-visual">
           <img
             :src="panelIllustration"
-            alt="Ilustración de numerología de Astrodata"
+            alt="Ilustración de numerología de Astrodatha"
             width="480"
             height="600"
           />
@@ -129,27 +118,6 @@ onBeforeUnmount(() => document.removeEventListener("keydown", handleEscape));
       </div>
     </aside>
   </Transition>
-
-  <nav
-    class="floating-socials"
-    :class="{ 'is-hidden': panelOpen }"
-    aria-label="Redes sociales de Astrodata"
-  >
-    <a
-      v-for="network in floatingSocialNetworks"
-      :key="network.platform"
-      class="floating-social-link"
-      :href="network.url"
-      target="_blank"
-      rel="noopener noreferrer"
-      :aria-label="`Visitar Astrodata en ${network.platform}`"
-      :title="network.platform"
-    >
-      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-        <path :d="network.icon.path" />
-      </svg>
-    </a>
-  </nav>
 
   <button
     type="button"

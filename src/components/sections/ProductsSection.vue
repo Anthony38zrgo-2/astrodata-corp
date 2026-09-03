@@ -13,7 +13,7 @@ const imageModules = import.meta.glob([
 const getImage = (imageName) => imageModules[`../../assets/images/${imageName}`];
 const { createWhatsAppUrl } = useWhatsApp();
 const getServiceMessage = (service) =>
-  `Hola, quisiera recibir información sobre ${service.title} (${service.price}) de Astrodata.`;
+  `Hola Mary, quisiera recibir información y agendar la ${service.title} (${service.price}) de Astrodatha.`;
 </script>
 
 <template>
@@ -24,7 +24,7 @@ const getServiceMessage = (service) =>
           <p class="section-kicker">{{ services.header.subtitle }}</p>
           <h2 id="services-title">{{ services.header.title }}</h2>
         </div>
-        <p>Encontramos contigo el tipo de acompañamiento que mejor responda a tu momento y tus necesidades.</p>
+        <p>Sesiones individuales y personalizadas con tu hora y fecha de nacimiento.</p>
       </header>
 
       <div class="services-grid">
@@ -39,7 +39,11 @@ const getServiceMessage = (service) =>
             <span class="service-number" aria-hidden="true">0{{ index + 1 }}</span>
           </figure>
           <div class="service-body">
+            <div class="service-meta" v-if="service.badge">
+              <span class="service-badge">{{ service.badge }}</span>
+            </div>
             <h3>{{ service.title }}</h3>
+            <p v-if="service.tagline" class="service-tagline"><em>{{ service.tagline }}</em></p>
             <p>{{ service.description }}</p>
             <div class="service-price" aria-label="Precio del servicio">
               <span class="price">{{ service.price }}</span>

@@ -1,194 +1,134 @@
 {
   "brand": {
-    "name": "Astrodata",
-    "tagline": "Numerología y tu fecha de nacimiento",
+    "name": "Astrodatha",
+    "tagline": "Numerología y Sanación del Alma",
     "logo": "logo-header.svg",
     "headerLogo": "logo-header.svg",
-    "logoAlt": "Astrodata, numerología y tu fecha de nacimiento"
+    "logoAlt": "Astrodatha, Numerología y Sanación del Alma"
   },
   "navigation": [
     { "label": "Inicio", "href": "#inicio" },
-    { "label": "Numerología", "href": "#numerologia" },
-    { "label": "Servicios", "href": "#servicios" },
-    { "label": "Calculadora", "href": "#calculadora" },
-    { "label": "Contacto", "href": "#contacto" }
+    { "label": "Filosofía", "href": "#filosofia" },
+    { "label": "Sobre tu guía", "href": "#nosotros" },
+    { "label": "Servicios", "href": "#servicios" }
   ],
   "home": {
     "hero": {
-      "title": "Bienvenidos",
-      "headline": "Descubre la energía que acompaña tu fecha de nacimiento",
-      "description": "La numerología pitagórica te ofrece una lectura clara y práctica de tu día de nacimiento, para comprender tu esencia, tus fortalezas y el momento que atraviesas.",
-      "primaryCta": "Calcular mi número",
-      "secondaryCta": "Ver servicios",
+      "title": "Astrodatha",
+      "subtitle": "Numerología y Sanación del Alma",
+      "headline": "Descubre el código de tu alma, transforma tu vida con propósito divino",
+      "description": "La numerología pitagórica, junto con tu Mapa Astrokab, te ofrece una guía clara y práctica con la hora y fecha de nacimiento para comprender tus fortalezas, ciclos que se repiten, sanación de la raíz familiar y del alma.",
+      "primaryCta": "Ver servicios",
+      "secondaryCta": "Sobre tu guía",
       "highlights": [
-        "Método pitagórico",
-        "Asesoría personalizada",
+        "Método Pitagórico",
+        "Asesoría Personalizada",
         "Atención por WhatsApp"
       ],
       "image": "hero-numerologia.svg",
-      "imageAlt": "Círculo numerológico con los números del 1 al 9"
+      "imageAlt": "Astrodatha Numerológico - Círculo con estrella y números 1, 3, 6, 8"
     },
     "stats": [
-      { "value": "36", "label": "Países con asesorías" },
-      { "value": "7.900+", "label": "Asesorías realizadas" },
-      { "value": "2", "label": "Libros publicados" }
+      { "value": "+25", "label": "Años de experiencia profesional" },
+      { "value": "100%", "label": "Asesoría personalizada" },
+      { "value": "1 a 9", "label": "Código cuántico de tu alma" }
     ]
   },
   "about": {
     "philosophy": {
-      "title": "¿Qué es la numerología pitagórica?",
+      "title": "¿Qué es la numeración pitagórica / AstroKab?",
       "subtitle": "Nuestra filosofía",
+      "motto": "Sanas Tú, Sanas Tu Linaje",
       "paragraphs": [
-        "La numerología pitagórica parte de la idea de que los números encierran un significado simbólico que acompaña a cada persona. Tu fecha de nacimiento resume un mapa de energía útil para mirar tu carácter, tu propósito y el momento que vives.",
-        "No se trata de adivinar el futuro, sino de leer con orden y claridad la información que ya está en tu vida. Cada número tiene una vibración, y comprenderla te ayuda a tomar mejores decisiones y a conocerte con más profundidad."
+        "Los números encierran un significado simbólico que acompaña a cada persona. Tu hora y fecha de nacimiento resume una energía cuántica para mirar tu carácter, propósito de vida, karma, raíces familiares y sanación del alma.",
+        "La numerología no se trata de adivinar el futuro, sino de descodificar tu pasado para liberar tu potencial con orden, claridad y propósito divino."
       ],
+      "birthBreakdown": {
+        "title": "Desglose cuántico de tu fecha",
+        "exampleNote": "Ejemplo: 17 · 04 · 1992",
+        "items": [
+          {
+            "unit": "Día",
+            "example": "17",
+            "title": "Personalidad y Cualidades",
+            "detail": "¿Quién soy en esencia?"
+          },
+          {
+            "unit": "Mes",
+            "example": "04",
+            "title": "Alma y Karma",
+            "detail": "Tu aprendizaje espiritual interior"
+          },
+          {
+            "unit": "Año",
+            "example": "1992",
+            "title": "Lo extraordinario",
+            "detail": "Programación y sanación de la familia"
+          }
+        ]
+      },
       "image": "filosofia-numerologia.svg",
-      "imageAlt": "Símbolo de la numerología pitagórica con los números del 1 al 9"
+      "imageAlt": "Mandala circular con los números del 1 al 9 y estrella central Astrodatha"
     },
     "founder": {
-      "title": "¿Quién está detrás de Astrodata?",
+      "title": "¿Quién está detrás de Astrodatha?",
       "subtitle": "Sobre tu guía",
-      "name": "Cristian Barrón",
+      "name": "Mary Marín",
+      "role": "Administradora, Numeróloga y Coaching Espiritual",
       "paragraphs": [
-        "Soy numerólogo y me dedico desde hace años a estudiar y compartir la energía de la fecha de nacimiento.",
-        "Acompaño a personas de toda Latinoamérica a interpretar su día de nacimiento con un método claro, práctico y sin tecnicismos innecesarios.",
-        "Mi compromiso es que cada consulta te brinde una lectura honesta, ordenada y aplicable a tu día a día.",
-        "Será un gusto ayudarte a descubrir lo que tu número tiene para contarte."
+        "Soy Administradora de Profesión con más de 25 años de experiencia en gestión y consultoría empresarial. Numeróloga y coaching espiritual.",
+        "Astrodatha nació como una guía personal y espiritual. Te acompaño a interpretar tu fecha de nacimiento.",
+        "Viajarás al momento exacto en que naciste (pasado) para liberar tu potencial (futuro)."
       ],
       "image": "fundador-numerologia.svg",
-      "imageAlt": "Retrato de Cristian Barrón, numerólogo de Astrodata"
+      "imageAlt": "Retrato de Mary Marín, numeróloga y coaching espiritual en Astrodatha"
     },
     "virtualCare": {
-      "title": "¿Cómo funciona una lectura?",
-      "description": "Partimos de tu fecha de nacimiento para reducirla a tu número personal. A partir de ahí, exploramos tu energía, tus ciclos, tus fortalezas y las oportunidades que tienes delante, con un lenguaje cercano y una mirada práctica.",
+      "title": "¿Cómo funciona una consulta?",
+      "subtitle": "Atención personalizada",
+      "description": "Todo es con CITA PREVIA y por WA (WhatsApp). Analizaremos tu fecha de nacimiento y hora, descodificaremos tu propósito de vida, tu número personal, sanación de raíz familiar y sanación de tu alma.",
+      "buttonLabel": "Conversemos",
       "image": "hero-numerologia.svg",
-      "imageAlt": "Proceso de lectura numerológica desde tu fecha de nacimiento"
+      "imageAlt": "Proceso de consulta personalizada por WhatsApp con Astrodatha"
     }
   },
-  "resources": {
-    "title": "La energía de cada número",
-    "items": [
-      {
-        "id": "numeros-energia",
-        "title": "Del 1 al 9: la energía de cada número",
-        "buttonLabel": "Más aquí",
-        "image": "recurso-numeros.svg",
-        "imageAlt": "Los números del 1 al 9 y su energía",
-        "visualSize": "large"
-      },
-      {
-        "id": "fecha-nacimiento",
-        "title": "Tu día de nacimiento habla de ti",
-        "buttonLabel": "Más aquí",
-        "image": "recurso-fecha.svg",
-        "imageAlt": "La fecha de nacimiento como espejo de tu energía",
-        "visualSize": "small"
-      },
-      {
-        "id": "numeros-maestros",
-        "title": "Números maestros: 11, 22 y 33",
-        "buttonLabel": "Más aquí",
-        "image": "recurso-maestros.svg",
-        "imageAlt": "Los números maestros 11, 22 y 33",
-        "visualSize": "small"
-      },
-      {
-        "id": "guia-practica",
-        "title": "Una guía práctica para tu número",
-        "buttonLabel": "Más aquí",
-        "image": "recurso-guia.svg",
-        "imageAlt": "Guía práctica de numerología aplicada a tu vida",
-        "visualSize": "large"
-      }
-    ]
-  },
-  "calculator": {
-    "title": "Calcula tu número",
-    "subtitle": "Tu fecha de nacimiento",
-    "description": "Ingresa tu fecha de nacimiento y descubre en segundos tu número personal, con un significado breve y una invitación a profundizar.",
-    "dayLabel": "Día",
-    "monthLabel": "Mes",
-    "yearLabel": "Año",
-    "example": "Ejemplo: 22 · 05 · 1989",
-    "buttonLabel": "Calcular mi número",
-    "resultTitle": "Tu número es",
-    "numericLabel": "Número personal",
-    "masterNote": "Número maestro",
-    "meaningIntro": "Este número resume tu energía de nacimiento.",
-    "recalculateLabel": "Calcular otro",
-    "defaultMeaning": "Cada número encierra una vibración distinta. Consulta un resumen de la tuya y, si quieres, profundizamos juntos."
-  },
-  "interpretations": {
-    "1": "Energía de liderazgo, iniciativa e independencia. Tiendes a abrir caminos y confiar en tu criterio.",
-    "2": "Energía de cooperación, sensibilidad y equilibrio. Sueles armonizar grupos y sentir el detalle.",
-    "3": "Energía de expresión, creatividad y comunicación. Tienes facilidad para comunicar y para inspirar.",
-    "4": "Energía de orden, constancia y trabajo bien hecho. Construyes bases sólidas y confiables.",
-    "5": "Energía de cambio, libertad y curiosidad. Te adaptas y exploras con facilidad.",
-    "6": "Energía de servicio, familia y responsabilidad. Cuidas, proteges y generas armonía.",
-    "7": "Energía de análisis, intuición y espiritualidad. Buscas comprender la esencia de las cosas.",
-    "8": "Energía de logro, gestión y abundancia. Materializas objetivos y manejas recursos con talento.",
-    "9": "Energía de cierre, compasión y sabiduría. Integras experiencias y acompañas a otros.",
-    "11": "Energía de intuición elevada e inspiración. Un número maestro con gran potencial creativo.",
-    "22": "Energía de construcción y materialización. Un número maestro capaz de convertir ideas en legados.",
-    "33": "Energía de enseñanza y servicio altruista. Un número maestro orientado a guiar y sanar."
-  },
   "contact": {
-    "title": "Contáctanos",
-    "description": "Escríbenos y conversemos sobre tu fecha de nacimiento. Estamos aquí para acompañarte en tu lectura.",
-    "fields": [
-      { "name": "firstName", "label": "Primer nombre", "type": "text", "required": true },
-      { "name": "lastName", "label": "Apellido", "type": "text", "required": true },
-      { "name": "email", "label": "Email", "type": "email", "required": true }
-    ],
-    "captchaLabel": "Soy humano",
-    "submitLabel": "Enviar"
+    "title": "Contacto",
+    "description": "Consultas personalizadas con cita previa por WhatsApp con Mary Marín."
   },
   "whatsapp": {
     "countryCode": "51",
     "panelTitle": "¿Cómo podemos ayudarte?",
-    "panelDescription": "Elige una consulta frecuente y conversemos por WhatsApp.",
-    "defaultMessage": "Hola, quisiera recibir información sobre la numerología de Astrodata.",
+    "panelDescription": "Elige una consulta y conversemos directamente por WhatsApp.",
+    "defaultMessage": "Hola Mary, quisiera recibir información sobre la consulta de Astrodatha.",
     "serviceButtonLabel": "Solicitar información",
     "questions": [
       {
-        "label": "¿Cómo se calcula mi número?",
-        "message": "Hola, quisiera saber cómo se calcula mi número en numerología."
+        "label": "Sesión de Numerología (S/ 300)",
+        "message": "Hola Mary, quisiera solicitar información y agendar la Sesión de Numerología (S/ 300)."
       },
       {
-        "label": "¿Qué revela mi fecha de nacimiento?",
-        "message": "Hola, quisiera conocer qué revela mi fecha de nacimiento."
+        "label": "Sesión de AstroKab (S/ 700)",
+        "message": "Hola Mary, quisiera solicitar información sobre la Sesión de AstroKab (S/ 700 - Mapa Astral + Kabbalah)."
       },
       {
-        "label": "¿Cómo agendo una asesoría?",
-        "message": "Hola, quisiera agendar una asesoría de numerología."
+        "label": "¿Cómo funciona la cita previa?",
+        "message": "Hola Mary, quisiera saber la disponibilidad para agendar mi cita previa por WhatsApp."
       },
       {
-        "label": "¿Cuánto cuesta una lectura?",
-        "message": "Hola, quisiera consultar el costo de una lectura de numerología."
+        "label": "Sanación de raíz familiar y linaje",
+        "message": "Hola Mary, me gustaría profundizar en la sanación de mi raíz familiar y del alma con mi fecha y hora de nacimiento."
       },
       {
-        "label": "¿Qué es un número maestro?",
-        "message": "Hola, quisiera saber qué es un número maestro."
+        "label": "¿Qué revela mi fecha y hora?",
+        "message": "Hola Mary, quisiera saber qué información revela mi fecha y hora de nacimiento con Astrodatha."
       }
     ]
   },
   "footer": {
-    "phone": "918131928",
-    "email": "contacto@astrodata.com",
-    "copyright": "©2026 - Astrodata",
-    "socialNetworks": [
-      {
-        "platform": "Facebook",
-        "url": "https://www.facebook.com"
-      },
-      {
-        "platform": "Instagram",
-        "url": "https://www.instagram.com"
-      },
-      {
-        "platform": "TikTok",
-        "url": "https://www.tiktok.com"
-      }
-    ]
+    "phone": "934499795",
+    "phoneDisplay": "+51 934 499 795",
+    "email": "contacto@astrodatha.com",
+    "copyright": "©2026 - Astrodatha · Numerología y Sanación del Alma"
   }
 }

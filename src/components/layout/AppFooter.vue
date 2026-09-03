@@ -1,5 +1,8 @@
 <script setup>
 import { siteData } from "@/constants/company";
+import { useWhatsApp } from "@/composables/useWhatsApp";
+
+const { whatsappUrl } = useWhatsApp();
 </script>
 
 <template>
@@ -10,25 +13,22 @@ import { siteData } from "@/constants/company";
           <strong>{{ siteData.brand.name }}</strong>
           <small>{{ siteData.brand.tagline }}</small>
         </a>
-        <p>Numerología pitagórica y lectura personalizada de tu fecha de nacimiento.</p>
+        <p>Lectura personalizada con tu hora y fecha de nacimiento para descodificar tu propósito y sanar tu linaje.</p>
         <nav class="footer-nav" aria-label="Navegación del pie de página">
           <a v-for="item in siteData.navigation" :key="item.href" :href="item.href">{{ item.label }}</a>
         </nav>
       </div>
       <div class="footer-bottom">
-        <nav class="social-links" aria-label="Redes sociales">
+        <div class="footer-contact">
           <a
-            v-for="network in siteData.footer.socialNetworks"
-            :key="network.platform"
-            :href="network.url"
+            :href="whatsappUrl"
             target="_blank"
             rel="noopener noreferrer"
-            :aria-label="network.platform"
-          >{{ network.platform.slice(0, 2) }}</a>
-        </nav>
-        <div class="footer-contact">
-          <a :href="`tel:${siteData.footer.phone}`">{{ siteData.footer.phone }}</a>
-          <a :href="`mailto:${siteData.footer.email}`">{{ siteData.footer.email }}</a>
+            class="footer-wa-channel"
+            aria-label="Atención exclusiva por WhatsApp"
+          >
+            Atención y Citas por WhatsApp: {{ siteData.footer.phoneDisplay || siteData.footer.phone }} ↗
+          </a>
         </div>
         <p>{{ siteData.footer.copyright }}</p>
       </div>

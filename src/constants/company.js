@@ -5,7 +5,7 @@ export const COMPANY_INFO = {
   phone: siteData.footer.phone,
   phoneDisplay: siteData.footer.phone,
   email: siteData.footer.email,
-  description: siteData.contact.description,
+  description: siteData.contact?.description || siteData.brand?.tagline || "",
 };
 
 export { siteData };

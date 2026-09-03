@@ -40,10 +40,10 @@ const logoImage = imageModules[`../../assets/images/${siteData.brand.headerLogo}
 
       <a
         class="header-cta"
-        href="#calculadora"
+        href="#servicios"
         @click="menuOpen = false"
       >
-        Calcular mi número
+        Ver servicios
       </a>
 
       <button

@@ -3,28 +3,31 @@
   --font-display: "DM Serif Display", Georgia, serif;
 
   --color-white: #ffffff;
-  --color-coexistir-900: #b3902f;
-  --color-coexistir-700: #a3802a;
-  --color-coexistir-500: #8a6b1f;
+  /* Tonos Vino y Borgoña de Alta Jerarquía */
+  --color-coexistir-900: #4a0e1c;
+  --color-coexistir-700: #6e1a2c;
+  --color-coexistir-500: #8f253b;
+  /* Oro Radiante Actual (Símbolos, Acentos y Luz) */
   --color-coexistir-active: #d4af37;
-  --color-sage-400: #f2ecdd;
-  --color-sage-100: #f6f1e5;
-  --color-icon-muted: #a49c8a;
-  --color-soft-white: #faf9f6;
+  /* Derivados Suaves (Ceniza de Vino y Porcelana Cálida) */
+  --color-sage-400: #ebd8dc;
+  --color-sage-100: #f7eff1;
+  --color-icon-muted: #a88c94;
+  --color-soft-white: #faf7f7;
   --color-ink: #1b1a17;
-  --color-muted: #6f6a5f;
-  --color-line: #e8e3d8;
+  --color-muted: #6a6466;
+  --color-line: #ebdce0;
 
-  --shadow-soft: 0 24px 60px -32px rgb(0 0 0 / 0.28);
-  --shadow-card: 0 18px 40px -28px rgb(0 0 0 / 0.18);
+  --shadow-soft: 0 24px 60px -32px rgb(74 14 28 / 0.25);
+  --shadow-card: 0 18px 40px -28px rgb(74 14 28 / 0.14);
 }
 
 :root {
-  --palette-sage: #b3902f;
-  --palette-mist: #8a6b1f;
-  --palette-warm-white: #faf9f6;
-  --palette-light-gray: #f6f1e5;
-  --palette-dark-olive: #b3902f;
+  --palette-sage: #6e1a2c;
+  --palette-mist: #8f253b;
+  --palette-warm-white: #faf7f7;
+  --palette-light-gray: #f7eff1;
+  --palette-dark-olive: #4a0e1c;
 
   --color-background: var(--palette-warm-white);
   --color-surface: var(--palette-light-gray);
@@ -33,31 +36,31 @@
   --color-accent: var(--palette-mist);
 
   --color-text: #1b1a17;
-  --color-text-secondary: #6f6a5f;
+  --color-text-secondary: #6a6466;
   --color-text-inverse: #ffffff;
-  --color-text-accent: #b3902f;
+  --color-text-accent: #6e1a2c;
 
-  --color-border: rgb(0 0 0 / 0.12);
-  --color-highlight: rgb(179 144 47 / 0.1);
-  --color-shadow: rgb(0 0 0 / 0.18);
+  --color-border: rgb(74 14 28 / 0.12);
+  --color-highlight: rgb(212 175 55 / 0.12);
+  --color-shadow: rgb(74 14 28 / 0.18);
 
-  --aero-glass-sage: rgb(179 144 47 / 0.16);
-  --aero-glass-mist: rgb(138 107 31 / 0.14);
+  --aero-glass-sage: rgb(110 26 44 / 0.16);
+  --aero-glass-mist: rgb(143 37 59 / 0.14);
   --aero-glass-light: rgb(255 255 255 / 0.7);
   --aero-border-light: rgb(0 0 0 / 0.08);
-  --aero-border-dark: rgb(179 144 47 / 0.4);
-  --aero-shadow: rgb(0 0 0 / 0.2);
+  --aero-border-dark: rgb(110 26 44 / 0.4);
+  --aero-shadow: rgb(74 14 28 / 0.2);
 
-  --coexistir-green-900: #b3902f;
-  --coexistir-green-700: #a3802a;
-  --coexistir-green-500: #8a6b1f;
+  --coexistir-green-900: #4a0e1c;
+  --coexistir-green-700: #6e1a2c;
+  --coexistir-green-500: #8f253b;
   --coexistir-green-active: #d4af37;
-  --coexistir-sage-400: #f2ecdd;
-  --coexistir-sage-100: #f6f1e5;
-  --coexistir-icon-muted: #a49c8a;
+  --coexistir-sage-400: #ebd8dc;
+  --coexistir-sage-100: #f7eff1;
+  --coexistir-icon-muted: #a88c94;
   --coexistir-white: #ffffff;
-  --coexistir-off-white: #faf9f6;
+  --coexistir-off-white: #faf7f7;
   --coexistir-text: #1b1a17;
-  --coexistir-text-muted: #6f6a5f;
-  --coexistir-border: #e8e3d8;
+  --coexistir-text-muted: #6a6466;
+  --coexistir-border: #ebdce0;
 }

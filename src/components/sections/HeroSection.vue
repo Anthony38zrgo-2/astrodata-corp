@@ -18,17 +18,16 @@ const { whatsappUrl } = useWhatsApp();
   <section id="inicio" class="hero" aria-labelledby="hero-title">
     <div class="hero-inner">
       <div class="hero-content">
+        <p v-if="siteData.home.hero.subtitle" class="hero-kicker">{{ siteData.home.hero.subtitle }}</p>
         <h1 id="hero-title">{{ siteData.home.hero.headline }}</h1>
         <p class="hero-description">{{ siteData.home.hero.description }}</p>
         <div class="hero-actions">
           <a
-            :href="whatsappUrl"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#servicios"
             class="button-primary"
           >
             {{ siteData.home.hero.primaryCta }}
-            <span aria-hidden="true">↗</span>
+            <span aria-hidden="true">↓</span>
           </a>
           <a href="#nosotros" class="button-secondary">
             {{ siteData.home.hero.secondaryCta }}
@@ -49,11 +48,11 @@ const { whatsappUrl } = useWhatsApp();
         />
         <figcaption>
           <span class="status-dot" aria-hidden="true"></span>
-          Lectura clara y personalizada
+          Astrodatha · Lectura clara y personalizada
         </figcaption>
       </figure>
     </div>
-    <div class="hero-stats" aria-label="Astrodata en cifras">
+    <div class="hero-stats" aria-label="Astrodatha en cifras">
       <div v-for="stat in siteData.home.stats" :key="stat.label" class="hero-stat">
         <strong>{{ stat.value }}</strong>
         <span>{{ stat.label }}</span>
