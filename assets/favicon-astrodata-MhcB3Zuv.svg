@@ -6,6 +6,6 @@
       <stop offset="1" stop-color="#9a7b1f"/>
     </linearGradient>
   </defs>
-  <rect width="64" height="64" rx="14" fill="#f6f1e5"/>
-  <text x="32" y="46" text-anchor="middle" font-family="Georgia, serif" font-size="38" font-weight="700" fill="url(#gold)">A</text>
+  <rect width="64" height="64" rx="14" fill="#0b1b3d"/>
+  <text x="32" y="32" text-anchor="middle" dominant-baseline="central" font-family="'DM Serif Display', Georgia, serif" font-size="40" font-weight="700" fill="#d4af37">A</text>
 </svg>
